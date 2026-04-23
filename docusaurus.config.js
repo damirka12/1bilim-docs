@@ -5,7 +5,7 @@ const config = {
   tagline: 'Қазақстандағы №1 ағылшын курсы',
   favicon: 'img/favicon.ico',
   url: 'https://damirka12.github.io',
-  baseUrl: '/',
+  baseUrl: '/1bilim-docs/',
   organizationName: 'damirka12',
   projectName: '1bilim-docs',
   onBrokenLinks: 'throw',
