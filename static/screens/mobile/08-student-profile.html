@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="kk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>1Bilim - Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1a1c1c",
+                        "on-secondary-container": "#694000",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#663e00",
+                        "surface-container-low": "#f3f3f3",
+                        "on-tertiary-container": "#003559",
+                        "on-surface": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "surface-bright": "#f9f9f9",
+                        "primary-fixed-dim": "#ffb691",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary": "#00629f",
+                        "on-surface-variant": "#594136",
+                        "outline": "#8d7164",
+                        "secondary-container": "#fda625",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#ffddb9",
+                        "surface-tint": "#9e4200",
+                        "primary-fixed": "#ffdbcb",
+                        "secondary": "#865300",
+                        "inverse-primary": "#ffb691",
+                        "primary-container": "#ff6f00",
+                        "tertiary-container": "#08a1ff",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#793100",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container": "#eeeeee",
+                        "primary": "#9e4200",
+                        "tertiary-fixed": "#cfe4ff",
+                        "tertiary-fixed-dim": "#9acbff",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary-container": "#592200",
+                        "on-tertiary-fixed": "#001d34",
+                        "outline-variant": "#e1bfb0",
+                        "on-primary-fixed": "#341100",
+                        "on-tertiary-fixed-variant": "#004a79",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed": "#2b1700",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed-dim": "#ffb961"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased min-h-screen pb-32">
+<!-- TopAppBar Semantic Shell -->
+<header class="w-full sticky top-0 z-40 bg-[#F9F9F9] flex items-center justify-between px-6 py-4 w-full">
+<button class="text-[#9E4200] hover:opacity-80 transition-opacity active:scale-95 duration-200 p-2 -ml-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-container">
+<span aria-hidden="true" class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-xl text-on-surface">Профиль</h1>
+<button class="text-[#9E4200] hover:opacity-80 transition-opacity active:scale-95 duration-200 p-2 -mr-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-container">
+<span aria-hidden="true" class="material-symbols-outlined text-2xl">settings</span>
+</button>
+</header>
+<main class="px-6 pt-4 max-w-md mx-auto">
+<!-- Avatar Section -->
+<section class="flex flex-col items-center mb-8">
+<div class="relative mb-4">
+<div class="w-[88px] h-[88px] rounded-full bg-primary-container flex items-center justify-center text-on-primary font-headline font-bold text-3xl border-4 border-white shadow-[0_8px_32px_rgba(26,28,28,0.06)]">
+                    АБ
+                </div>
+<button class="absolute -bottom-2 right-1/2 translate-x-1/2 bg-surface-container-lowest border border-outline-variant/30 text-on-surface-variant font-label text-[10px] tracking-widest uppercase px-3 py-1 rounded-full shadow-sm flex items-center gap-1 active:scale-95 transition-transform whitespace-nowrap">
+<span class="material-symbols-outlined text-[14px]">edit</span>
+                    Өзгерту
+                </button>
+</div>
+<h2 class="font-headline font-bold text-2xl text-on-surface text-center mb-1">Айгерим Бекова</h2>
+<p class="text-on-surface-variant text-sm text-center">aigerim.b@example.com</p>
+</section>
+<!-- Stats Row -->
+<section class="grid grid-cols-3 gap-3 mb-10">
+<div class="bg-surface-container-lowest rounded-DEFAULT p-4 flex flex-col items-center justify-center shadow-[0_8px_32px_rgba(26,28,28,0.06)] text-center">
+<span class="text-primary-container font-headline font-bold text-2xl mb-1">12</span>
+<span class="text-on-surface-variant text-xs leading-tight">Өткен<br/>сабақ</span>
+</div>
+<div class="bg-surface-container-lowest rounded-DEFAULT p-4 flex flex-col items-center justify-center shadow-[0_8px_32px_rgba(26,28,28,0.06)] text-center">
+<span class="text-primary-container font-headline font-bold text-2xl mb-1">B1</span>
+<span class="text-on-surface-variant text-xs leading-tight">CEFR<br/>деңгей</span>
+</div>
+<div class="bg-surface-container-lowest rounded-DEFAULT p-4 flex flex-col items-center justify-center shadow-[0_8px_32px_rgba(26,28,28,0.06)] text-center">
+<span class="text-primary-container font-headline font-bold text-2xl flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    7
+                </span>
+<span class="text-on-surface-variant text-xs leading-tight">Күн<br/>серия</span>
+</div>
+</section>
+<!-- My Marathons -->
+<section class="mb-10">
+<h3 class="font-headline font-bold text-lg text-on-surface mb-4">Менің марафондарым</h3>
+<div class="flex flex-col gap-4">
+<!-- Active Marathon -->
+<div class="bg-surface-container-lowest rounded-lg p-5 shadow-[0_8px_32px_rgba(26,28,28,0.06)] relative overflow-hidden active:scale-[0.98] transition-transform">
+<div class="flex justify-between items-start mb-3">
+<h4 class="font-headline font-bold text-xl text-on-surface">IELTS</h4>
+<span class="bg-[#E8F5E9] text-[#2E7D32] font-label text-[10px] tracking-widest uppercase px-2 py-1 rounded-full">Белсенді</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-3 mb-2">
+<div class="bg-gradient-to-b from-secondary-container to-primary-container h-3 rounded-full" style="width: 60%"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant text-sm font-medium">60% аяқталды</span>
+<span class="bg-primary-container/10 text-primary-container font-label text-[10px] tracking-widest uppercase px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                            18 күн
+                        </span>
+</div>
+</div>
+<!-- Expired Marathon -->
+<div class="bg-surface-container-lowest opacity-75 rounded-lg p-5 shadow-[0_8px_32px_rgba(26,28,28,0.06)]">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-headline font-bold text-lg text-on-surface">General English</h4>
+<span class="bg-error-container text-on-error-container font-label text-[10px] tracking-widest uppercase px-2 py-1 rounded-full">Мерзімі өтті</span>
+</div>
+<button class="w-full border border-outline-variant/30 text-primary font-medium py-3 rounded-DEFAULT hover:bg-surface-variant/50 transition-colors">
+                        Жалғастыру
+                    </button>
+</div>
+</div>
+</section>
+<!-- Settings List -->
+<section class="bg-surface-container-lowest rounded-lg p-2 shadow-[0_8px_32px_rgba(26,28,28,0.06)] mb-8"><button class="w-full flex items-center justify-between p-[10px] mb-2 bg-[#FFF3E0] border border-[#FFB74D] rounded-[10px] active:scale-[0.98] transition-transform">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#FF6F00] flex items-center justify-center text-sm">
+            📅
+        </div>
+<span class="font-bold text-[#BF4E00]">Кесте</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-[#FF6F00] text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+            2 бүгін
+        </span>
+<span class="material-symbols-outlined text-[#FF6F00] text-[20px]">chevron_right</span>
+</div>
+</button>
+<button class="w-full flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors rounded-DEFAULT group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant group-hover:bg-primary-container/10 group-hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">language</span>
+</div>
+<span class="font-medium text-on-surface">Интерфейс тілі</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="text-sm">Русский</span>
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</div>
+</button>
+<div class="h-[1px] bg-surface-variant/50 mx-4"></div>
+<button class="w-full flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors rounded-DEFAULT group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant group-hover:bg-primary-container/10 group-hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</div>
+<span class="font-medium text-on-surface">Хабарландырулар</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">chevron_right</span>
+</button>
+<div class="h-[1px] bg-surface-variant/50 mx-4"></div>
+<button class="w-full flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors rounded-DEFAULT group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant group-hover:bg-primary-container/10 group-hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<span class="font-medium text-on-surface">Құпия сөзді өзгерту</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">chevron_right</span>
+</button>
+<div class="h-[1px] bg-surface-variant/50 mx-4"></div>
+<button class="w-full flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors rounded-DEFAULT group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant group-hover:bg-primary-container/10 group-hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<span class="font-medium text-on-surface">Қолдау қызметі</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">chevron_right</span>
+</button>
+<div class="h-[1px] bg-surface-variant/50 mx-4"></div>
+<button class="w-full flex items-center justify-between p-4 hover:bg-error-container/20 transition-colors rounded-DEFAULT group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-error-container/30 flex items-center justify-center text-error group-hover:bg-error-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+</div>
+<span class="font-medium text-error">Шығу</span>
+</div>
+</button>
+</section>
+</main>
+<!-- BottomNavBar Semantic Shell -->
+<nav class="md:hidden fixed bottom-6 left-4 right-4 rounded-[32px] h-[64px] z-50 bg-white/70 dark:bg-white/70 backdrop-blur-xl shadow-[0_8px_32px_rgba(26,28,28,0.06)] flex justify-around items-center px-6">
+<button class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200 p-2 rounded-2xl">
+<span aria-hidden="true" class="material-symbols-outlined mb-1">home</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200 p-2 rounded-2xl">
+<span aria-hidden="true" class="material-symbols-outlined mb-1">menu_book</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase">Lessons</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200 p-2 rounded-2xl">
+<span aria-hidden="true" class="material-symbols-outlined mb-1">forum</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase">Chat</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-orange-50 text-orange-700 rounded-2xl px-4 py-1 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200">
+<span aria-hidden="true" class="material-symbols-outlined mb-1 text-orange-700 dark:text-orange-700" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase text-orange-700 dark:text-orange-700">Profile</span>
+</button>
+</nav>
+</body></html>

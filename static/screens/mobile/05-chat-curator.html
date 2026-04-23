@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="kk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>1Bilim - Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1a1c1c",
+                        "on-secondary-container": "#694000",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#663e00",
+                        "surface-container-low": "#f3f3f3",
+                        "on-tertiary-container": "#003559",
+                        "on-surface": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "surface-bright": "#f9f9f9",
+                        "primary-fixed-dim": "#ffb691",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary": "#00629f",
+                        "on-surface-variant": "#594136",
+                        "outline": "#8d7164",
+                        "secondary-container": "#fda625",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#ffddb9",
+                        "surface-tint": "#9e4200",
+                        "primary-fixed": "#ffdbcb",
+                        "secondary": "#865300",
+                        "inverse-primary": "#ffb691",
+                        "primary-container": "#ff6f00",
+                        "tertiary-container": "#08a1ff",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#793100",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container": "#eeeeee",
+                        "primary": "#9e4200",
+                        "tertiary-fixed": "#cfe4ff",
+                        "tertiary-fixed-dim": "#9acbff",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary-container": "#592200",
+                        "on-tertiary-fixed": "#001d34",
+                        "outline-variant": "#e1bfb0",
+                        "on-primary-fixed": "#341100",
+                        "on-tertiary-fixed-variant": "#004a79",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed": "#2b1700",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed-dim": "#ffb961"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body antialiased flex flex-col h-screen overflow-hidden">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-40 bg-[#F9F9F9] flex items-center justify-between px-6 py-4">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-surface-container-high transition-colors press-scale-effect text-gray-400">
+<span class="material-symbols-outlined text-xl">arrow_back</span>
+</button>
+<div class="flex items-center gap-3 flex-1 px-4">
+<div class="relative">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary font-headline font-bold text-sm shadow-sm">
+                    МД
+                </div>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-surface-container-lowest rounded-full"></div>
+</div>
+<div>
+<h1 class="font-headline font-semibold text-lg text-on-surface leading-tight tracking-tight">Мисс Дана</h1>
+<p class="text-xs text-on-surface-variant">Онлайн</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-surface-container-high transition-colors text-[#9E4200]">
+<span class="material-symbols-outlined">call</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container-high transition-colors text-[#9E4200]">
+<span class="material-symbols-outlined">videocam</span>
+</button>
+</div>
+</header>
+<!-- Chat Area -->
+<main class="flex-1 overflow-y-auto px-4 py-6 flex flex-col gap-6 bg-surface">
+<!-- Date Pill -->
+<div class="flex justify-center">
+<span class="bg-surface-container-high text-on-surface-variant font-label text-[10px] tracking-widest uppercase px-3 py-1 rounded-full shadow-[0_4px_12px_rgba(26,28,28,0.03)]">
+                Бүгін
+            </span>
+</div>
+<!-- Curator Bubble (Incoming) -->
+<div class="flex items-end gap-2 self-start max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-primary-container flex-shrink-0 flex items-center justify-center text-on-primary font-headline font-bold text-xs shadow-sm">
+                МД
+            </div>
+<div class="bg-surface-container-lowest border border-surface-container-highest rounded-2xl rounded-bl-sm px-4 py-3 shadow-[0_2px_8px_rgba(26,28,28,0.04)]">
+<p class="text-on-surface text-sm leading-relaxed">Сәлем! Сабақ 4-тің тапсырмасын тексердім 👍</p>
+<div class="flex items-center justify-end gap-1 mt-1">
+<span class="text-[10px] text-on-surface-variant">14:30</span>
+</div>
+</div>
+</div>
+<!-- Student Bubble (Outgoing) -->
+<div class="flex items-end gap-2 self-end max-w-[85%]">
+<div class="bg-primary-container text-on-primary rounded-2xl rounded-br-sm px-4 py-3 shadow-[0_4px_16px_rgba(255,111,0,0.15)]">
+<p class="text-sm leading-relaxed">Жақсы, рақмет! Бүгін бере аламын ба?</p>
+<div class="flex items-center justify-end gap-1 mt-1 opacity-80">
+<span class="text-[10px]">14:35</span>
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+</div>
+</div>
+</div>
+<!-- File Message (Outgoing) -->
+<div class="flex items-end gap-2 self-end max-w-[85%]">
+<div class="bg-primary-container text-on-primary rounded-2xl rounded-br-sm p-3 shadow-[0_4px_16px_rgba(255,111,0,0.15)] flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined fill">description</span>
+</div>
+<div>
+<p class="text-sm font-semibold">essay_v2.pdf</p>
+<p class="text-xs opacity-80">2.4 MB</p>
+</div>
+<div class="flex items-center justify-end gap-1 mt-auto ml-2 opacity-80">
+<span class="text-[10px]">14:38</span>
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+</div>
+</div>
+</div>
+<!-- Audio Message (Incoming) -->
+<div class="flex items-end gap-2 self-start max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-primary-container flex-shrink-0 flex items-center justify-center text-on-primary font-headline font-bold text-xs shadow-sm">
+                МД
+            </div>
+<div class="bg-surface-container-lowest border border-surface-container-highest rounded-2xl rounded-bl-sm p-3 shadow-[0_2px_8px_rgba(26,28,28,0.04)] flex flex-col">
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined fill pl-1">play_arrow</span>
+</button>
+<!-- Waveform Simulation -->
+<div class="flex items-center gap-[2px] h-6 flex-1">
+<div class="w-1 h-3 bg-primary rounded-full opacity-60"></div>
+<div class="w-1 h-5 bg-primary rounded-full opacity-80"></div>
+<div class="w-1 h-6 bg-primary rounded-full"></div>
+<div class="w-1 h-4 bg-primary rounded-full opacity-70"></div>
+<div class="w-1 h-2 bg-primary rounded-full opacity-40"></div>
+<div class="w-1 h-5 bg-primary rounded-full opacity-90"></div>
+<div class="w-1 h-3 bg-primary rounded-full opacity-50"></div>
+<div class="w-1 h-2 bg-surface-container-highest rounded-full"></div>
+<div class="w-1 h-2 bg-surface-container-highest rounded-full"></div>
+<div class="w-1 h-2 bg-surface-container-highest rounded-full"></div>
+</div>
+<span class="text-xs text-on-surface font-medium">0:45</span>
+</div>
+<div class="flex items-center justify-end gap-1 mt-1">
+<span class="text-[10px] text-on-surface-variant">14:42</span>
+</div>
+</div>
+</div>
+<!-- Typing Indicator -->
+<div class="flex items-end gap-2 self-start max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-primary-container flex-shrink-0 flex items-center justify-center text-on-primary font-headline font-bold text-xs shadow-sm">
+                МД
+            </div>
+<div class="bg-surface-container-lowest border border-surface-container-highest rounded-2xl rounded-bl-sm px-4 py-3 shadow-[0_2px_8px_rgba(26,28,28,0.04)] flex items-center gap-1">
+<div class="w-2 h-2 bg-on-surface-variant rounded-full animate-bounce" style="animation-delay: 0s;"></div>
+<div class="w-2 h-2 bg-on-surface-variant rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
+<div class="w-2 h-2 bg-on-surface-variant rounded-full animate-bounce" style="animation-delay: 0.4s;"></div>
+</div>
+</div>
+</main>
+<!-- Input Bar -->
+<div class="bg-white/70 dark:bg-white/70 backdrop-blur-xl px-4 py-3 pb-8 shadow-[0_-8px_32px_rgba(26,28,28,0.06)] sticky bottom-0 w-full z-50">
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+<div class="flex-1 bg-surface-container-lowest border border-surface-container-highest rounded-full px-4 py-2 flex items-center gap-2 shadow-[0_2px_8px_rgba(26,28,28,0.02)]">
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-sm text-on-surface placeholder:text-on-surface-variant/50 p-0" placeholder="Хабарлама жазыңыз..." type="text"/>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">mic</span>
+</button>
+</div>
+<button class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-[0_4px_16px_rgba(255,111,0,0.2)] hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined pl-1">send</span>
+</button>
+</div>
+</div>
+</body></html>

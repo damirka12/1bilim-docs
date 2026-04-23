@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>onebilim - Curators</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-tint": "#9e4200",
+                "surface-variant": "#e2e2e2",
+                "surface-container-lowest": "#ffffff",
+                "primary-fixed": "#ffdbcb",
+                "inverse-on-surface": "#f1f1f1",
+                "on-tertiary-fixed-variant": "#004a79",
+                "on-tertiary-container": "#003559",
+                "on-secondary-fixed-variant": "#663e00",
+                "error-container": "#ffdad6",
+                "tertiary-fixed": "#cfe4ff",
+                "surface-container-high": "#e8e8e8",
+                "primary-fixed-dim": "#ffb691",
+                "error": "#ba1a1a",
+                "on-surface": "#1a1c1c",
+                "on-tertiary-fixed": "#001d34",
+                "surface-container-low": "#f3f3f3",
+                "on-primary-fixed": "#341100",
+                "on-secondary-fixed": "#2b1700",
+                "surface": "#f9f9f9",
+                "on-background": "#1a1c1c",
+                "surface-bright": "#f9f9f9",
+                "on-secondary-container": "#694000",
+                "on-error-container": "#93000a",
+                "tertiary": "#00629f",
+                "on-primary": "#ffffff",
+                "tertiary-fixed-dim": "#9acbff",
+                "primary": "#9e4200",
+                "outline-variant": "#e1bfb0",
+                "on-surface-variant": "#594136",
+                "inverse-surface": "#2f3131",
+                "secondary-container": "#fda625",
+                "on-primary-container": "#592200",
+                "surface-container-highest": "#e2e2e2",
+                "surface-dim": "#dadada",
+                "on-tertiary": "#ffffff",
+                "background": "#f9f9f9",
+                "surface-container": "#eeeeee",
+                "on-secondary": "#ffffff",
+                "secondary": "#865300",
+                "secondary-fixed": "#ffddb9",
+                "primary-container": "#ff6f00",
+                "outline": "#8d7164",
+                "on-error": "#ffffff",
+                "inverse-primary": "#ffb691",
+                "secondary-fixed-dim": "#ffb961",
+                "tertiary-container": "#08a1ff",
+                "on-primary-fixed-variant": "#793100"
+        },
+        "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+        },
+        "spacing": {},
+        "fontFamily": {
+                "headline": [
+                        "Plus Jakarta Sans"
+                ],
+                "display": [
+                        "Plus Jakarta Sans"
+                ],
+                "body": [
+                        "Manrope"
+                ],
+                "label": [
+                        "Plus Jakarta Sans"
+                ]
+        },
+        "fontSize": {}
+},
+    },
+  }
+</script>
+<style>
+  body {
+    background-color: theme('colors.surface');
+    color: theme('colors.on-surface');
+    font-family: theme('fontFamily.body');
+  }
+</style>
+</head>
+<body class="flex h-screen overflow-hidden bg-surface antialiased">
+<!-- SideNavBar -->
+<nav aria-label="Sidebar" class="bg-[#FFFFFF] text-[#FF6F00] font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-[10px] fixed left-0 top-0 h-screen w-[240px] shadow-[0_8px_32px_rgba(26,28,28,0.06)] flex flex-col py-6 gap-2 z-50 transition-transform duration-200 ease-out hidden md:flex">
+<div class="px-8 mb-8 flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<img alt="onebilim logo" class="w-8 h-8 rounded-full object-cover" data-alt="Abstract orange and white gradient sphere resembling a modern education brand logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9iZB-7IjX2VucbWyeDCcDGZM0J2qRPGKv3nbviYiga28jOZIXsA6enKvEyBB3BJ3E50sGNYaOzXGZBcsnyzsWzvuX2B_Y9iAz_SiuMf4Y9QGm1-N_rlc39VgpWiKWL_uzTO9cxHx_7dQ5hza1BCtZYpXezyJ6-mqg4VHg9LdD-3k3FN6MpTkqjRmBG54A-MVp-P8OWC7PDZRbwYmDvQ5KiOIP8G_3NGELRqVeIKl2GskfONyoi1iBvQzT4DTxIcIJNUMazGx8FTwo"/>
+<span class="text-2xl font-black text-[#FF6F00] tracking-tighter normal-case">onebilim</span>
+</div>
+<span class="text-on-surface-variant font-medium text-[10px] normal-case tracking-normal">Admin Portal</span>
+</div>
+<div class="flex flex-col gap-1 overflow-y-auto flex-1 px-2">
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span>Home</span>
+</a>
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="sports_score">sports_score</span>
+<span>Marathons</span>
+</a>
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Students</span>
+</a>
+<a class="flex items-center gap-4 bg-[#FF6F00] text-white rounded-full mx-2 font-bold px-4 py-3 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span>Curators</span>
+</a>
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="assignment_turned_in">assignment_turned_in</span>
+<span>HW Review</span>
+</a>
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span>Chat Monitoring</span>
+</a>
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span>Statistics</span>
+</a>
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span>Tariffs</span>
+</a>
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span>Stories</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 ml-0 md:ml-[240px] flex flex-col h-screen overflow-hidden bg-surface relative">
+<!-- TopAppBar -->
+<header class="bg-[#F9F9F9]/80 backdrop-blur-xl text-[#9E4200] font-['Plus_Jakarta_Sans'] font-semibold tracking-tight docked full-width top-0 h-16 bg-[#E8E8E8] shadow-none flat no-line layering flex justify-between items-center px-8 w-full z-40 sticky">
+<div class="flex items-center gap-6 flex-1">
+<h1 class="text-2xl font-display font-bold text-on-surface hidden md:block">Кураторлар</h1>
+<!-- Search Bar -->
+<div class="relative w-[320px] hidden lg:block ml-4">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant/50 text-[20px]" data-icon="search">search</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-full py-2 pl-10 pr-4 text-sm font-body text-on-surface focus:ring-2 focus:ring-primary-container focus:outline-none placeholder:text-on-surface-variant/50 shadow-sm" placeholder="Куратор іздеу..." type="text"/>
+</div>
+<!-- Filter Dropdown -->
+<button class="flex items-center gap-2 bg-surface-container-lowest hover:bg-surface-container-high transition-colors px-4 py-2 rounded-full text-sm font-body font-medium text-on-surface shadow-sm">
+<span>Марафон: Барлығы</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-[#E8E8E8] transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-[#E8E8E8] transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-[#E8E8E8] transition-colors">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<img alt="Admin Avatar" class="w-8 h-8 rounded-full object-cover ml-2 ring-2 ring-surface-container-lowest" data-alt="Close up portrait of young professional admin wearing smart casual clothes with neutral expression against soft blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9_-s12frrbpYX8DjD9cP8JjM_opSF5_1aNaYcm5jm1OyfdadvhdZ_fn6jzJh1J1MijA6sr5lI3nK9bCDfe4sNjUcHh3ahi0RxYUnNmZFuvJQr7e3gMfBRwlNEMcSNiixFlqBmsjZCsPMAdROZazKUL6KiCe-Njex7wIZwRaD215uxacGRFmgHqGqcJsLcoeSCXUZYjCe7Ww3MmdptlNsdKAaeQSs9BipgWu_rRT44OYEEPJ5N4h_h-eR1YaXyahso9VaY3bij1XoE"/>
+<button class="ml-4 bg-primary-container text-white font-headline font-bold py-2 px-5 rounded-[10px] flex items-center gap-2 hover:bg-primary transition-colors shadow-sm text-sm">
+<span class="material-symbols-outlined text-[18px] font-bold" data-icon="add">add</span>
+        Куратор қосу
+      </button>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="flex-1 overflow-auto p-8 flex gap-8">
+<!-- Left/Main Column -->
+<div class="flex-1 flex flex-col gap-8 max-w-7xl">
+<!-- Stats Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Stat Card 1 -->
+<div class="bg-surface-container-lowest rounded-[16px] p-6 shadow-sm flex flex-col gap-1 relative overflow-hidden group hover:scale-[0.98] transition-transform cursor-pointer">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/10 rounded-full blur-xl group-hover:bg-primary-container/20 transition-colors"></div>
+<span class="text-3xl font-display font-bold text-primary-container">12 Куратор</span>
+<span class="text-sm font-body text-on-surface-variant font-medium">Белсенді</span>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface-container-lowest rounded-[16px] p-6 shadow-sm flex flex-col gap-1 relative overflow-hidden group hover:scale-[0.98] transition-transform cursor-pointer">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-tertiary-container/10 rounded-full blur-xl group-hover:bg-tertiary-container/20 transition-colors"></div>
+<span class="text-3xl font-display font-bold text-on-surface">248 Оқушы</span>
+<span class="text-sm font-body text-on-surface-variant font-medium">Барлық оқушылар</span>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface-container-lowest rounded-[16px] p-6 shadow-sm flex flex-col gap-1 relative overflow-hidden group hover:scale-[0.98] transition-transform cursor-pointer">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-secondary-container/10 rounded-full blur-xl group-hover:bg-secondary-container/20 transition-colors"></div>
+<span class="text-3xl font-display font-bold text-tertiary">4.2 сағ</span>
+<span class="text-sm font-body text-on-surface-variant font-medium">Орташа жауап уақыты</span>
+</div>
+</div>
+<!-- Curators Table Card -->
+<div class="bg-surface-container-lowest rounded-[16px] shadow-sm overflow-hidden flex flex-col flex-1">
+<!-- Table Header -->
+<div class="grid grid-cols-[48px_1.5fr_1fr_1fr_1fr_1fr_100px_48px] gap-4 p-4 border-b border-surface-container-highest bg-surface-container/30 text-[12px] font-body text-on-surface-variant font-semibold uppercase tracking-wider items-center">
+<div class="flex justify-center">
+<input class="rounded border-outline-variant text-primary-container focus:ring-primary-container w-4 h-4 bg-surface-container-lowest" type="checkbox"/>
+</div>
+<div>Куратор</div>
+<div>Марафондар</div>
+<div>Оқушылар</div>
+<div>ҮТ тексерілді</div>
+<div>Жауап уақыты</div>
+<div>Статус</div>
+<div class="text-center">Әрекет</div>
+</div>
+<!-- Table Body -->
+<div class="flex flex-col overflow-y-auto">
+<!-- Row 1 -->
+<div class="grid grid-cols-[48px_1.5fr_1fr_1fr_1fr_1fr_100px_48px] gap-4 p-4 items-center hover:bg-surface-container-low transition-colors cursor-pointer border-b border-surface-container-high last:border-0 relative">
+<!-- Active indicator -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container rounded-r-full"></div>
+<div class="flex justify-center">
+<input checked="" class="rounded border-outline-variant text-primary-container focus:ring-primary-container w-4 h-4 bg-surface-container-lowest" type="checkbox"/>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-white flex items-center justify-center font-display font-bold text-sm shrink-0">МД</div>
+<div class="flex flex-col">
+<span class="font-display font-bold text-sm text-on-surface">Мисс Дана</span>
+<span class="font-body text-[12px] text-on-surface-variant">dana@onebilim.kz</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-1 bg-secondary-fixed text-primary-container rounded-full text-[11px] font-label font-bold uppercase tracking-wider">IELTS</span>
+<span class="px-2 py-1 bg-secondary-fixed text-primary-container rounded-full text-[11px] font-label font-bold uppercase tracking-wider">Pre-Upper</span>
+</div>
+<div class="font-body text-[13px] text-on-surface font-medium">24 оқушы</div>
+<div class="font-body text-[13px] text-on-surface-variant">142 ҮТ</div>
+<div class="font-body text-[13px] text-[#27AE60] font-semibold">2.1 сағ</div>
+<div>
+<span class="px-2 py-1 bg-[#E8F5E9] text-[#27AE60] rounded-full text-[11px] font-label font-bold uppercase tracking-wider whitespace-nowrap">Белсенді</span>
+</div>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors justify-self-center">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-[48px_1.5fr_1fr_1fr_1fr_1fr_100px_48px] gap-4 p-4 items-center hover:bg-surface-container-low transition-colors cursor-pointer border-b border-surface-container-high last:border-0">
+<div class="flex justify-center">
+<input class="rounded border-outline-variant text-primary-container focus:ring-primary-container w-4 h-4 bg-surface-container-lowest" type="checkbox"/>
+</div>
+<div class="flex items-center gap-3">
+<img alt="Miss Asel" class="w-10 h-10 rounded-full object-cover shrink-0" data-alt="Portrait of young woman with dark hair smiling warmly, natural lighting, professional headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSZ0YkttvhS-UNCZhu94KqRL6bQBR27xhHEIzxdx2pEmEstBBP_M2O0krGQXkGtzaBJELCAZ28htNzguMjSlsuMfjNXDC4fNTFyvM3vjVXhlQtXjPJ0261Ru9ek3TAdOPcmDedK54sN44gWoQ6oGZkh8upXACHlVIAEDGyzc7y_wG4fB0yuAv6hVglrTlpVchbJrTSMVwihCqTQqhBbMg6bICYuTkn977d8sNXXavl0RQdfp_PzYKDPhFIO1gJ_Yz5UrVfGeudfxN8"/>
+<div class="flex flex-col">
+<span class="font-display font-bold text-sm text-on-surface">Мисс Асель</span>
+<span class="font-body text-[12px] text-on-surface-variant">asel@onebilim.kz</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-1 bg-surface-container-high text-on-surface rounded-full text-[11px] font-label font-bold uppercase tracking-wider">Pre-Upper</span>
+<span class="px-2 py-1 bg-surface-container-high text-on-surface rounded-full text-[11px] font-label font-bold uppercase tracking-wider">Beginner</span>
+</div>
+<div class="font-body text-[13px] text-on-surface font-medium">18 оқушы</div>
+<div class="font-body text-[13px] text-on-surface-variant">89 ҮТ</div>
+<div class="font-body text-[13px] text-secondary-container font-semibold">3.5 сағ</div>
+<div>
+<span class="px-2 py-1 bg-[#E8F5E9] text-[#27AE60] rounded-full text-[11px] font-label font-bold uppercase tracking-wider whitespace-nowrap">Белсенді</span>
+</div>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors justify-self-center">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-[48px_1.5fr_1fr_1fr_1fr_1fr_100px_48px] gap-4 p-4 items-center hover:bg-surface-container-low transition-colors cursor-pointer border-b border-surface-container-high last:border-0">
+<div class="flex justify-center">
+<input class="rounded border-outline-variant text-primary-container focus:ring-primary-container w-4 h-4 bg-surface-container-lowest" type="checkbox"/>
+</div>
+<div class="flex items-center gap-3">
+<img alt="Erlan Seit" class="w-10 h-10 rounded-full object-cover shrink-0" data-alt="Portrait of young man with glasses looking confident, bright office background, professional headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXaJMqyaqqcTIZAtCsqShoX7p2-pdbDSrbNo6uiC-qVrXWgq0PZp_PcNe27_bPgaC9MPXa9Nebt_VolOYSrLlEAtpHMcrJUl1wYYIA5OQLgRqxwNAMr7MUgUrJb2d0lADlPs5Xh0uW4qCldC36RpJsf7qcgTYH5Z2qF0S6l71Hy6kwvL6_OHiAmNKYAOMc10TgZOYCv1WlospWSfY7mVrF5h215-ERuVaJcROdtQ_rz2JuWrNMgGFMFmTmFMs5APGfK2ScC9KXWtAj"/>
+<div class="flex flex-col">
+<span class="font-display font-bold text-sm text-on-surface">Ерлан Сейіт</span>
+<span class="font-body text-[12px] text-on-surface-variant">erlan@onebilim.kz</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-1 bg-secondary-fixed text-primary-container rounded-full text-[11px] font-label font-bold uppercase tracking-wider">IELTS</span>
+</div>
+<div class="font-body text-[13px] text-on-surface font-medium">12 оқушы</div>
+<div class="font-body text-[13px] text-on-surface-variant">45 ҮТ</div>
+<div class="font-body text-[13px] text-error font-semibold">6.2 сағ</div>
+<div>
+<span class="px-2 py-1 bg-[#E8F5E9] text-[#27AE60] rounded-full text-[11px] font-label font-bold uppercase tracking-wider whitespace-nowrap">Белсенді</span>
+</div>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors justify-self-center">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Panel (Curator Details) -->
+<aside class="w-[320px] bg-surface-container-lowest rounded-[16px] shadow-sm flex flex-col overflow-hidden shrink-0 hidden xl:flex relative">
+<!-- Close button overlay -->
+<button class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors z-10">
+<span class="material-symbols-outlined text-[18px]" data-icon="close">close</span>
+</button>
+<div class="p-8 flex flex-col items-center border-b border-surface-container-highest relative">
+<div class="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-primary-fixed to-transparent opacity-50"></div>
+<div class="w-20 h-20 rounded-full bg-primary-container text-white flex items-center justify-center font-display font-bold text-2xl mb-4 relative ring-4 ring-surface-container-lowest shadow-sm z-10">МД</div>
+<h2 class="text-xl font-display font-bold text-on-surface text-center z-10">Мисс Дана</h2>
+<p class="text-sm font-body text-on-surface-variant mt-1 z-10">dana@onebilim.kz</p>
+<div class="flex flex-wrap gap-2 mt-4 justify-center z-10">
+<span class="px-3 py-1.5 bg-secondary-fixed text-primary-container rounded-full text-[12px] font-label font-bold uppercase tracking-wider">IELTS</span>
+<span class="px-3 py-1.5 bg-secondary-fixed text-primary-container rounded-full text-[12px] font-label font-bold uppercase tracking-wider">Pre-Upper</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-6 flex-1 overflow-y-auto">
+<!-- Progress section -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<span class="text-sm font-display font-bold text-on-surface">Оқушы лимиті</span>
+<span class="text-sm font-body text-on-surface-variant font-medium"><strong class="text-on-surface">24</strong> / 30</span>
+</div>
+<div class="h-3 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full w-[80%]"></div>
+</div>
+</div>
+<!-- Detailed Stats -->
+<div class="bg-surface rounded-[12px] p-4 flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<span class="text-sm font-body text-on-surface-variant">ҮТ тексерілді</span>
+<span class="font-display font-bold text-on-surface">142</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm font-body text-on-surface-variant">Орташа уақыт</span>
+<span class="font-display font-bold text-[#27AE60]">2.1 сағ</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm font-body text-on-surface-variant">Белсенді оқушылар</span>
+<span class="font-display font-bold text-on-surface">24</span>
+</div>
+</div>
+<div class="flex-1"></div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-3 mt-4">
+<button class="w-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body font-semibold py-3 px-4 rounded-[12px] flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="edit">edit</span>
+            Өзгерту
+          </button>
+<button class="w-full bg-secondary-fixed/50 text-on-primary-container font-body font-semibold py-3 px-4 rounded-[12px] flex items-center justify-center gap-2 hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="group_add">group_add</span>
+            Оқушыларды басқару
+          </button>
+<button class="w-full text-error font-body font-semibold py-3 px-4 rounded-[12px] flex items-center justify-center gap-2 hover:bg-error-container/50 transition-colors mt-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="delete">delete</span>
+            Жою
+          </button>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</body></html>

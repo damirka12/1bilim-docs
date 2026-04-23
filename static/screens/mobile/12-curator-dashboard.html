@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="kk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>1Bilim - Curator Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1a1c1c",
+                        "on-secondary-container": "#694000",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#663e00",
+                        "surface-container-low": "#f3f3f3",
+                        "on-tertiary-container": "#003559",
+                        "on-surface": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "surface-bright": "#f9f9f9",
+                        "primary-fixed-dim": "#ffb691",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary": "#00629f",
+                        "on-surface-variant": "#594136",
+                        "outline": "#8d7164",
+                        "secondary-container": "#fda625",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#ffddb9",
+                        "surface-tint": "#9e4200",
+                        "primary-fixed": "#ffdbcb",
+                        "secondary": "#865300",
+                        "inverse-primary": "#ffb691",
+                        "primary-container": "#ff6f00",
+                        "tertiary-container": "#08a1ff",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#793100",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container": "#eeeeee",
+                        "primary": "#9e4200",
+                        "tertiary-fixed": "#cfe4ff",
+                        "tertiary-fixed-dim": "#9acbff",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary-container": "#592200",
+                        "on-tertiary-fixed": "#001d34",
+                        "outline-variant": "#e1bfb0",
+                        "on-primary-fixed": "#341100",
+                        "on-tertiary-fixed-variant": "#004a79",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed": "#2b1700",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed-dim": "#ffb961"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen pb-[100px]">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-40 bg-background flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity press-scale-effect text-[#9E4200]">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-[#FF6F00] text-2xl tracking-tighter">1Bilim</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative hover:opacity-80 transition-opacity press-scale-effect text-[#9E4200]">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute -top-1 -right-1 bg-error text-on-error text-[10px] font-bold px-1.5 py-0.5 rounded-full font-label">5</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-variant flex items-center justify-center">
+<img alt="Miss Dana Avatar" class="w-full h-full object-cover" data-alt="professional portrait of a young female teacher smiling warmly, bright lighting, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAwAtw2-aMElfyxXrXlAMJ6C_iwWT2Tq-bCG2p7qmsnxexsO5odp5h9E52nGLhGO8O5-JpML9bWU3tJnbDccYrJiYTuvwrWsTefnCmM2sD1godNnYain3fWebBRXExp3VyBXmYGTK5CBKK3cpZX8PXxLXQDmkhls97mTEFaOlnSWxhxMcAI9ZXozxKOgPul9PJX9rjBRIjDqJ7ceTze2nmMdbyqDPKsAVr7yO8x6UAYz-_tkCahYcIsp4PJJ-yj9z8Moy-XWLzkqIE"/>
+</div>
+</div>
+</header>
+<main class="px-6 py-4 space-y-8">
+<!-- Greeting -->
+<section class="space-y-1 pl-2">
+<h2 class="font-headline font-bold text-3xl tracking-tight text-on-surface">Сәлем, Мисс Дана 👋</h2>
+<p class="text-on-surface-variant text-sm pl-1 opacity-80 font-medium">Сәрсенбі, 24 Қазан</p>
+</section>
+<!-- Stats Grid (Bento style) -->
+<section class="grid grid-cols-2 gap-4">
+<!-- Card 1: Active Students -->
+<div class="bg-surface-container-lowest rounded-[20px] p-5 shadow-[0_8px_32px_rgba(26,28,28,0.04)] relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary-container opacity-10 rounded-full blur-2xl -mr-10 -mt-10"></div>
+<div class="flex flex-col h-full justify-between gap-3 relative z-10">
+<div class="w-10 h-10 rounded-full bg-primary-fixed-dim/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<div>
+<p class="font-headline font-bold text-2xl text-on-surface leading-tight">24</p>
+<p class="text-xs text-on-surface-variant font-medium mt-0.5">Белсенді оқушы</p>
+</div>
+<div class="flex items-center gap-1 text-[10px] text-[#4CAF50] font-bold uppercase tracking-wider mt-1">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+                        2 бүгін
+                    </div>
+</div>
+</div>
+<!-- Card 2: Homework Check -->
+<div class="bg-surface-container-lowest rounded-[20px] p-5 shadow-[0_8px_32px_rgba(26,28,28,0.04)] relative overflow-hidden flex flex-col justify-between border border-error/10">
+<div class="flex flex-col h-full justify-between gap-3 relative z-10">
+<div class="w-10 h-10 rounded-full bg-error-container/50 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">assignment_late</span>
+</div>
+<div>
+<p class="font-headline font-bold text-2xl text-error leading-tight">8</p>
+<p class="text-xs text-on-surface-variant font-medium mt-0.5">ДТ тексеру</p>
+</div>
+<a class="text-xs text-primary font-bold hover:opacity-80 transition-opacity flex items-center gap-1 mt-1" href="#">
+                        Бару <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3: Inactive -->
+<div class="bg-surface-container-lowest rounded-[20px] p-4 shadow-[0_8px_32px_rgba(26,28,28,0.04)] flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">person_off</span>
+</div>
+<div>
+<p class="font-headline font-bold text-xl text-on-surface leading-none">3</p>
+<p class="text-[11px] text-on-surface-variant font-medium leading-tight mt-0.5">Белсіз оқушы</p>
+</div>
+</div>
+<!-- Card 4: Today Lessons -->
+<div class="bg-surface-container-lowest rounded-[20px] p-4 shadow-[0_8px_32px_rgba(26,28,28,0.04)] flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+</div>
+<div>
+<p class="font-headline font-bold text-xl text-on-surface leading-none">2</p>
+<p class="text-[11px] text-on-surface-variant font-medium leading-tight mt-0.5">Бүгін сабақтар</p>
+</div>
+</div>
+</section>
+<!-- Homework Queue -->
+<section class="space-y-4">
+<div class="flex items-center justify-between pl-2 pr-1">
+<h3 class="font-headline font-bold text-lg text-on-surface">ДТ Кезегі</h3>
+<span class="bg-primary-container text-on-primary text-[10px] font-bold px-2 py-1 rounded-full font-label tracking-widest uppercase shadow-sm">8 жаңа</span>
+</div>
+<!-- Homework Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-[0_8px_32px_rgba(26,28,28,0.04)] space-y-4 relative">
+<!-- Status Pill -->
+<div class="absolute -top-3 left-4 bg-error text-on-error text-[10px] font-bold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm font-label tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                    2 күн өтті
+                </div>
+<div class="flex justify-between items-start pt-2">
+<div>
+<h4 class="font-headline font-bold text-base text-on-surface">Айгерим Бекова</h4>
+<p class="text-sm text-primary font-medium mt-0.5">IELTS Сабақ 4</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant text-sm font-bold">
+                        АБ
+                    </div>
+</div>
+<div class="bg-surface p-3 rounded-xl border border-outline-variant/20">
+<p class="text-sm text-on-surface-variant line-clamp-2 leading-relaxed">
+                        I think that global warming is a very serious issue, but in my essay I focused more on local pollution problems...
+                    </p>
+</div>
+<div class="flex flex-wrap gap-2">
+<div class="flex items-center gap-1.5 bg-surface-container-low px-3 py-1.5 rounded-full text-xs font-medium text-on-surface-variant border border-outline-variant/30">
+<span class="material-symbols-outlined text-[14px]">description</span>
+                        essay_draft.pdf
+                    </div>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-3 py-1.5 rounded-full text-xs font-medium text-on-surface-variant border border-outline-variant/30">
+<span class="material-symbols-outlined text-[14px]">mic</span>
+                        speaking_task.mp3
+                    </div>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 bg-[#4CAF50] text-white text-xs font-bold py-2.5 rounded-xl hover:opacity-90 transition-opacity active:scale-95 flex items-center justify-center gap-1">
+                        Қабылдау <span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<button class="flex-1 bg-secondary-container text-on-secondary-container text-xs font-bold py-2.5 rounded-xl hover:opacity-90 transition-opacity active:scale-95 flex items-center justify-center gap-1">
+                        Доработка <span class="material-symbols-outlined text-[16px]">refresh</span>
+</button>
+<button class="w-10 h-10 bg-error-container text-error rounded-xl flex items-center justify-center hover:opacity-90 transition-opacity active:scale-95 shrink-0">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Inactive Alert -->
+<section class="border-2 border-dashed border-secondary-container/40 bg-[#FFF3E0]/30 rounded-2xl p-5 space-y-4">
+<div class="flex items-center gap-2 text-secondary font-bold">
+<span class="material-symbols-outlined">warning</span>
+<h3 class="font-headline text-sm uppercase tracking-wider">Назар аударыңыз</h3>
+</div>
+<ul class="space-y-3">
+<li class="flex items-center justify-between">
+<span class="text-sm font-medium text-on-surface">Нұрлан Т.</span>
+<span class="text-xs text-error font-semibold bg-error-container/30 px-2 py-0.5 rounded-md">5 күн белсіз</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-sm font-medium text-on-surface">Динара Қ.</span>
+<span class="text-xs text-error font-semibold bg-error-container/30 px-2 py-0.5 rounded-md">5 күн белсіз</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-sm font-medium text-on-surface">Азамат С.</span>
+<span class="text-xs text-error font-semibold bg-error-container/30 px-2 py-0.5 rounded-md">6 күн белсіз</span>
+</li>
+</ul>
+<button class="w-full border border-secondary-container text-secondary-container bg-transparent text-sm font-bold py-2.5 rounded-xl hover:bg-secondary-container/10 transition-colors active:scale-95 mt-2">
+                 Хабарлама жіберу
+             </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-6 left-4 right-4 rounded-[32px] h-[64px] z-50 shadow-[0_8px_32px_rgba(26,28,28,0.06)] bg-white/70 dark:bg-white/70 backdrop-blur-xl flex justify-around items-center px-2">
+<button class="flex flex-col items-center justify-center bg-orange-50 text-orange-700 rounded-2xl px-4 py-1 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase mt-0.5">Басты</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200 px-4 py-1 rounded-2xl">
+<span class="material-symbols-outlined text-[24px]">groups</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase mt-0.5">Оқушылар</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200 px-4 py-1 rounded-2xl">
+<span class="material-symbols-outlined text-[24px]">rule_folder</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase mt-0.5">Тексеру</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200 px-4 py-1 rounded-2xl">
+<span class="material-symbols-outlined text-[24px]">event_note</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase mt-0.5">Кесте</span>
+</button>
+</nav>
+</body></html>

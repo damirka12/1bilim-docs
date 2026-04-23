@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="kk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Тариф таңдаңыз - 1Bilim</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#1a1c1c",
+                    "on-secondary-container": "#694000",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f9f9f9",
+                    "on-secondary-fixed-variant": "#663e00",
+                    "surface-container-low": "#f3f3f3",
+                    "on-tertiary-container": "#003559",
+                    "on-surface": "#1a1c1c",
+                    "surface": "#f9f9f9",
+                    "surface-bright": "#f9f9f9",
+                    "primary-fixed-dim": "#ffb691",
+                    "inverse-surface": "#2f3131",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "tertiary": "#00629f",
+                    "on-surface-variant": "#594136",
+                    "outline": "#8d7164",
+                    "secondary-container": "#fda625",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#ffddb9",
+                    "surface-tint": "#9e4200",
+                    "primary-fixed": "#ffdbcb",
+                    "secondary": "#865300",
+                    "inverse-primary": "#ffb691",
+                    "primary-container": "#ff6f00",
+                    "tertiary-container": "#08a1ff",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#793100",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-container": "#eeeeee",
+                    "primary": "#9e4200",
+                    "tertiary-fixed": "#cfe4ff",
+                    "tertiary-fixed-dim": "#9acbff",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#e8e8e8",
+                    "on-primary-container": "#592200",
+                    "on-tertiary-fixed": "#001d34",
+                    "outline-variant": "#e1bfb0",
+                    "on-primary-fixed": "#341100",
+                    "on-tertiary-fixed-variant": "#004a79",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-secondary-fixed": "#2b1700",
+                    "surface-dim": "#dadada",
+                    "secondary-fixed-dim": "#ffb961"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body": [
+                            "Manrope"
+                    ],
+                    "label": [
+                            "Plus Jakarta Sans"
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-shift-no-border {
+            border: none;
+            background-color: var(--color-surface);
+        }
+        .flat-no-shadows {
+            box-shadow: none;
+        }
+        .press-scale-effect:active {
+            transform: scale(0.95);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-40 bg-[#F9F9F9] bg-shift-no-border flat-no-shadows">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<button aria-label="Back" class="text-[#9E4200] hover:opacity-80 transition-opacity press-scale-effect flex items-center justify-center w-10 h-10 rounded-full">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-[#FF6F00] text-2xl tracking-tighter">1Bilim</h1>
+<button aria-label="Notifications" class="text-[#9E4200] hover:opacity-80 transition-opacity press-scale-effect flex items-center justify-center w-10 h-10 rounded-full">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</div>
+</header>
+<main class="px-6 pt-4 pb-12 max-w-2xl mx-auto space-y-8">
+<!-- Context Header -->
+<section class="space-y-2 pl-2">
+<h2 class="font-headline font-bold text-3xl tracking-tight text-on-surface">Тариф таңдаңыз</h2>
+<p class="font-body text-on-surface-variant text-base">IELTS курсы үшін тариф таңдаңыз. Кураторлар: Аяжан &amp; Мақсат.</p>
+</section>
+<!-- Tariffs Stack -->
+<section class="space-y-6">
+<!-- Standard Card -->
+<div class="bg-surface-container-lowest rounded-lg p-6 flex flex-col gap-4 shadow-[0_8px_32px_rgba(26,28,28,0.06)] relative overflow-hidden transition-transform press-scale-effect">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-semibold text-xl text-on-surface mb-1">Standard</h3>
+<div class="flex items-end gap-2">
+<span class="font-headline font-bold text-2xl text-on-surface">75,000 ₸</span>
+<span class="font-body text-on-surface-variant line-through text-sm mb-1">90,000 ₸</span>
+</div>
+</div>
+</div>
+<div class="h-px w-full bg-surface-container-high my-2"></div>
+<ul class="space-y-3 font-body text-sm text-on-surface">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Барлық бейне сабақтар
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Үй тапсырмасын тексеру
+                    </li>
+<li class="flex items-center gap-3 text-on-surface-variant/60">
+<span class="material-symbols-outlined text-outline text-xl">cancel</span>
+                        Live сабақтар
+                    </li>
+<li class="flex items-center gap-3 text-on-surface-variant/60">
+<span class="material-symbols-outlined text-outline text-xl">cancel</span>
+                        Speaking практикасы
+                    </li>
+</ul>
+<button class="mt-4 w-full py-3 rounded-DEFAULT font-headline font-semibold text-primary bg-surface-container-lowest border border-outline-variant/30 hover:bg-surface-container-low transition-colors">
+                    Таңдау
+                </button>
+</div>
+<!-- Premium Card (Popular) -->
+<div class="bg-surface-container-lowest rounded-lg p-6 flex flex-col gap-4 shadow-[0_16px_48px_rgba(255,111,0,0.12)] relative overflow-hidden border-2 border-primary-container transform hover:-translate-y-1 transition-transform">
+<!-- Badge -->
+<div class="absolute top-0 right-0 bg-secondary-container text-on-secondary-container px-4 py-1 rounded-bl-DEFAULT font-headline font-bold text-xs tracking-wider uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                    Танымал
+                </div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-semibold text-xl text-on-surface mb-1">Premium</h3>
+<div class="flex items-end gap-2">
+<span class="font-headline font-bold text-3xl text-primary-container">150,000 ₸</span>
+</div>
+</div>
+</div>
+<div class="h-px w-full bg-surface-container-high my-2"></div>
+<ul class="space-y-3 font-body text-sm text-on-surface">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Барлық бейне сабақтар
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Жеке куратор қолдауы
+                    </li>
+<li class="flex items-center gap-3 font-semibold">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Аптасына 2 Live сабақ
+                    </li>
+<li class="flex items-center gap-3 font-semibold">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Speaking практикасы (топтық)
+                    </li>
+</ul>
+<button class="mt-4 w-full py-4 rounded-DEFAULT font-headline font-bold text-on-primary bg-gradient-to-b from-secondary-container to-primary-container shadow-lg hover:opacity-90 transition-opacity flex justify-center items-center gap-2">
+                    Таңдау
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Individual Card -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-lg p-6 flex flex-col gap-4 shadow-[0_8px_32px_rgba(26,28,28,0.2)] relative overflow-hidden transition-transform press-scale-effect">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-semibold text-xl mb-1">Individual</h3>
+<div class="flex items-end gap-2">
+<span class="font-headline font-bold text-2xl text-secondary-container">250,000 ₸</span>
+</div>
+</div>
+</div>
+<div class="h-px w-full bg-white/10 my-2"></div>
+<ul class="space-y-3 font-body text-sm text-surface-dim">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Premium мүмкіндіктері
+                    </li>
+<li class="flex items-center gap-3 text-white font-medium">
+<span class="material-symbols-outlined text-secondary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        1:1 Менторлық сессиялар
+                    </li>
+<li class="flex items-center gap-3 text-white font-medium">
+<span class="material-symbols-outlined text-secondary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Жеке оқу жоспары
+                    </li>
+</ul>
+<button class="mt-4 w-full py-3 rounded-DEFAULT font-headline font-semibold text-on-secondary-container bg-secondary-container hover:bg-secondary-fixed transition-colors">
+                    Таңдау
+                </button>
+</div>
+</section>
+<!-- Payment Methods -->
+<section class="mt-8 space-y-4 pl-2">
+<h3 class="font-headline font-semibold text-lg text-on-surface">Төлем әдісі</h3>
+<div class="flex flex-col gap-3">
+<!-- Kaspi.kz Selected -->
+<label class="flex items-center justify-between bg-surface-container-lowest p-4 rounded-DEFAULT cursor-pointer shadow-[0_2px_8px_rgba(26,28,28,0.04)] border border-primary-container/20">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-[#F14635]/10 flex items-center justify-center">
+<span class="font-headline font-bold text-[#F14635]">K</span>
+</div>
+<span class="font-body font-medium text-on-surface">Kaspi.kz</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-primary-container flex items-center justify-center">
+<div class="w-3 h-3 rounded-full bg-primary-container"></div>
+</div>
+</label>
+<!-- Bank Card -->
+<label class="flex items-center justify-between bg-surface-container-lowest p-4 rounded-DEFAULT cursor-pointer shadow-[0_2px_8px_rgba(26,28,28,0.04)] hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">credit_card</span>
+</div>
+<span class="font-body font-medium text-on-surface">Банк картасы</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center">
+</div>
+</label>
+</div>
+</section>
+</main>
+<!-- Fixed Bottom Action -->
+<div class="fixed bottom-0 left-0 right-0 p-6 bg-surface-container-lowest/90 backdrop-blur-xl border-t border-surface-container-highest flex flex-col items-center gap-3 z-50">
+<button class="w-full max-w-md py-4 rounded-DEFAULT font-headline font-bold text-on-primary bg-primary-container shadow-lg hover:bg-primary transition-colors flex justify-center items-center gap-2">
+            Төлеуге өту
+            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="flex items-center gap-1 text-on-surface-variant/70 text-xs font-body">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span>Қауіпсіз төлем</span>
+</div>
+</div>
+</body></html>
