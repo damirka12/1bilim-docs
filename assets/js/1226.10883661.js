@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk_1_bilim_docs=globalThis.webpackChunk_1_bilim_docs||[]).push([[1226],{1226(i,s,c){c.d(s,{createInfoServices:()=>e.v});var e=c(3954);c(2519)}}]);

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="kk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>1Bilim - Сөздік</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1a1c1c",
+                        "on-secondary-container": "#694000",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#663e00",
+                        "surface-container-low": "#f3f3f3",
+                        "on-tertiary-container": "#003559",
+                        "on-surface": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "surface-bright": "#f9f9f9",
+                        "primary-fixed-dim": "#ffb691",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary": "#00629f",
+                        "on-surface-variant": "#594136",
+                        "outline": "#8d7164",
+                        "secondary-container": "#fda625",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#ffddb9",
+                        "surface-tint": "#9e4200",
+                        "primary-fixed": "#ffdbcb",
+                        "secondary": "#865300",
+                        "inverse-primary": "#ffb691",
+                        "primary-container": "#ff6f00",
+                        "tertiary-container": "#08a1ff",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#793100",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container": "#eeeeee",
+                        "primary": "#9e4200",
+                        "tertiary-fixed": "#cfe4ff",
+                        "tertiary-fixed-dim": "#9acbff",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary-container": "#592200",
+                        "on-tertiary-fixed": "#001d34",
+                        "outline-variant": "#e1bfb0",
+                        "on-primary-fixed": "#341100",
+                        "on-tertiary-fixed-variant": "#004a79",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed": "#2b1700",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed-dim": "#ffb961"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "body": [
+                            "Manrope"
+                        ],
+                        "label": [
+                            "Plus Jakarta Sans"
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            font-family: theme('fontFamily.body');
+        }
+        h1, h2, h3, h4, h5, h6, .font-headline {
+            font-family: theme('fontFamily.headline');
+        }
+        .font-label {
+            font-family: theme('fontFamily.label');
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col relative pb-32 md:pb-0">
+<!-- TopAppBar (From JSON) -->
+<header class="w-full sticky top-0 z-40 bg-[#F9F9F9] flex items-center justify-between px-6 py-4 w-full flat-no-shadows hidden md:flex">
+<div class="flex items-center gap-4">
+<button class="text-[#9E4200] hover:opacity-80 transition-opacity press-scale-effect flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-xl text-[#9E4200]">1Bilim</h1>
+</div>
+<button class="text-[#9E4200] hover:opacity-80 transition-opacity press-scale-effect flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</header>
+<!-- Mobile Top Navigation Context (Custom for Vocabulary) -->
+<div class="md:hidden sticky top-0 z-40 bg-surface/90 backdrop-blur-md px-6 py-4 flex items-center justify-between">
+<h1 class="font-headline font-bold text-2xl tracking-tight text-on-surface">Сөздік</h1>
+<button class="bg-primary-container text-on-primary font-label font-bold text-sm px-4 py-2 rounded-full uppercase tracking-widest shadow-[0_8px_32px_rgba(26,28,28,0.06)] active:scale-95 transition-transform">
+             + Қосу
+         </button>
+</div>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-4xl mx-auto px-6 py-6 md:py-10 flex flex-col gap-8">
+<!-- Web Header Context -->
+<div class="hidden md:flex items-center justify-between">
+<h1 class="font-headline font-bold text-4xl tracking-tight text-on-surface">Сөздік</h1>
+<button class="bg-primary-container text-on-primary font-label font-bold text-sm px-6 py-3 rounded-full uppercase tracking-widest shadow-[0_8px_32px_rgba(26,28,28,0.06)] hover:opacity-90 active:scale-95 transition-all">
+                + Қосу
+            </button>
+</div>
+<!-- Stats Row -->
+<div class="flex gap-3 overflow-x-auto pb-2 -mx-6 px-6 md:mx-0 md:px-0 hide-scrollbar">
+<div class="bg-surface-container-lowest border border-outline-variant/15 rounded-full px-4 py-2 flex items-center gap-2 whitespace-nowrap shadow-[0_4px_16px_rgba(26,28,28,0.03)]">
+<span class="text-xl">📚</span>
+<span class="font-body font-medium text-sm text-on-surface">142 сөз</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant/15 rounded-full px-4 py-2 flex items-center gap-2 whitespace-nowrap shadow-[0_4px_16px_rgba(26,28,28,0.03)]">
+<span class="text-xl">⭐</span>
+<span class="font-body font-medium text-sm text-on-surface">18 таңдаулы</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant/15 rounded-full px-4 py-2 flex items-center gap-2 whitespace-nowrap shadow-[0_4px_16px_rgba(26,28,28,0.03)]">
+<span class="text-xl">✅</span>
+<span class="font-body font-medium text-sm text-on-surface">67 үйренілді</span>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/15 rounded-full py-4 pl-12 pr-6 font-body text-base text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary-container/50 shadow-[0_4px_16px_rgba(26,28,28,0.03)] transition-all" placeholder="Сөз іздеу..." type="text"/>
+</div>
+<!-- Word Cards List -->
+<div class="flex flex-col gap-4">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-5 shadow-[0_8px_32px_rgba(26,28,28,0.04)] relative active:scale-[0.98] transition-transform duration-200">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<h2 class="font-headline font-bold text-xl tracking-tight text-on-surface">Perseverance</h2>
+<span class="bg-surface-container-high text-on-surface font-label text-[10px] uppercase tracking-wider px-2 py-1 rounded-md">B2</span>
+</div>
+<div class="flex gap-2 text-on-surface-variant">
+<button class="hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">star</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">volume_up</span></button>
+</div>
+</div>
+<div class="pl-4 border-l-2 border-primary-container/30 mb-6">
+<p class="font-body font-medium text-lg text-primary mb-1">Табандылық</p>
+<p class="font-body text-sm text-on-surface-variant italic">His perseverance was rewarded after many failures.</p>
+</div>
+<button class="w-full py-3 rounded-xl border border-outline-variant/30 text-primary font-label font-bold text-xs uppercase tracking-widest hover:bg-primary-fixed/50 transition-colors">
+                    Үйренілді деп белгілеу
+                </button>
+</div>
+<!-- Card 2 (Learned) -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-5 shadow-[0_8px_32px_rgba(26,28,28,0.04)] relative active:scale-[0.98] transition-transform duration-200">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<h2 class="font-headline font-bold text-xl tracking-tight text-on-surface">Accomplish</h2>
+<span class="bg-surface-container-high text-on-surface font-label text-[10px] uppercase tracking-wider px-2 py-1 rounded-md">B1</span>
+</div>
+<div class="flex gap-2">
+<button class="text-secondary-container"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">volume_up</span></button>
+</div>
+</div>
+<div class="pl-4 border-l-2 border-primary-container/30 mb-6">
+<p class="font-body font-medium text-lg text-primary mb-1">Орындау, жүзеге асыру</p>
+<p class="font-body text-sm text-on-surface-variant italic">We have a lot to accomplish today.</p>
+</div>
+<div class="w-full py-3 rounded-xl bg-[#E8F5E9] text-[#2E7D32] flex items-center justify-center gap-2 font-label font-bold text-xs uppercase tracking-widest">
+<span>✅</span> Үйренілді
+                </div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-5 shadow-[0_8px_32px_rgba(26,28,28,0.04)] relative active:scale-[0.98] transition-transform duration-200">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<h2 class="font-headline font-bold text-xl tracking-tight text-on-surface">Inevitable</h2>
+<span class="bg-tertiary-container text-on-tertiary-container font-label text-[10px] uppercase tracking-wider px-2 py-1 rounded-md">Менің сөзім</span>
+</div>
+<div class="flex gap-2 text-on-surface-variant">
+<button class="hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">star</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">volume_up</span></button>
+</div>
+</div>
+<div class="pl-4 border-l-2 border-primary-container/30 mb-6">
+<p class="font-body font-medium text-lg text-primary mb-1">Қашпас, болмай қоймайтын</p>
+<p class="font-body text-sm text-on-surface-variant italic">Change is inevitable.</p>
+</div>
+<button class="w-full py-3 rounded-xl border border-outline-variant/30 text-primary font-label font-bold text-xs uppercase tracking-widest hover:bg-primary-fixed/50 transition-colors">
+                    Үйренілді деп белгілеу
+                </button>
+</div>
+</div>
+</main>
+<!-- FAB (Mobile Only for Vocabulary additions) -->
+<button class="md:hidden fixed bottom-24 right-6 w-14 h-14 bg-primary-container text-on-primary rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(255,111,0,0.4)] active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- BottomNavBar (From JSON) -->
+<nav class="fixed bottom-0 w-full px-6 pb-8 flex justify-around items-center bg-white/70 dark:bg-white/70 backdrop-blur-xl rounded-[32px] h-[64px] z-50 shadow-[0_8px_32px_rgba(26,28,28,0.06)] md:hidden fixed bottom-6 left-4 right-4">
+<!-- Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase">Home</span>
+</a>
+<!-- Lessons (Active - closest semantic match to vocabulary) -->
+<a class="flex flex-col items-center justify-center bg-orange-50 text-orange-700 rounded-2xl px-4 py-1 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1">menu_book</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase text-orange-700 dark:text-orange-700">Lessons</span>
+</a>
+<!-- Chat (Inactive) -->
+<a class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1">forum</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase">Chat</span>
+</a>
+<!-- Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase">Profile</span>
+</a>
+</nav>
+<!-- SideNav Web (Implicit Context) -->
+<aside class="hidden md:flex flex-col w-64 h-screen fixed left-0 top-0 border-r border-outline-variant/15 bg-surface-container-lowest py-8 px-6 z-30 pt-24">
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface transition-colors font-label font-bold text-sm tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined">home</span> Home
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary-fixed/30 text-primary font-label font-bold text-sm tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined">menu_book</span> Lessons
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface transition-colors font-label font-bold text-sm tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined">forum</span> Chat
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface transition-colors font-label font-bold text-sm tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined">person</span> Profile
+            </a>
+</nav>
+</aside>
+</body></html>

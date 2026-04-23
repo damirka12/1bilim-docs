@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk_1_bilim_docs=globalThis.webpackChunk_1_bilim_docs||[]).push([[1947],{1947(e,i,s){s.d(i,{createWardleyServices:()=>a.J});var a=s(2295);s(2519)}}]);

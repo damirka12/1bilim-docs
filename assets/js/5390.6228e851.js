@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk_1_bilim_docs=globalThis.webpackChunk_1_bilim_docs||[]).push([[5390],{5390(c,e,i){i.d(e,{createArchitectureServices:()=>s.S});var s=i(5530);i(2519)}}]);

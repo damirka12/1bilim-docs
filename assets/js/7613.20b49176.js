@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk_1_bilim_docs=globalThis.webpackChunk_1_bilim_docs||[]).push([[7613],{7613(i,e,s){s.d(e,{createPieServices:()=>c.f});var c=s(9515);s(2519)}}]);

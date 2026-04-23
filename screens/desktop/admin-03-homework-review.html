@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html lang="kk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ҮТ тексеру - onebilim</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#9e4200",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#ffdbcb",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary-fixed-variant": "#004a79",
+                        "on-tertiary-container": "#003559",
+                        "on-secondary-fixed-variant": "#663e00",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#cfe4ff",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed-dim": "#ffb691",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-fixed": "#001d34",
+                        "surface-container-low": "#f3f3f3",
+                        "on-primary-fixed": "#341100",
+                        "on-secondary-fixed": "#2b1700",
+                        "surface": "#f9f9f9",
+                        "on-background": "#1a1c1c",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary-container": "#694000",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#00629f",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#9acbff",
+                        "primary": "#9e4200",
+                        "outline-variant": "#e1bfb0",
+                        "on-surface-variant": "#594136",
+                        "inverse-surface": "#2f3131",
+                        "secondary-container": "#fda625",
+                        "on-primary-container": "#592200",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-dim": "#dadada",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f9f9f9",
+                        "surface-container": "#eeeeee",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#865300",
+                        "secondary-fixed": "#ffddb9",
+                        "primary-container": "#ff6f00",
+                        "outline": "#8d7164",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#ffb691",
+                        "secondary-fixed-dim": "#ffb961",
+                        "tertiary-container": "#08a1ff",
+                        "on-primary-fixed-variant": "#793100",
+                        
+                        // Custom legacy colors mapped to semantic tokens or kept as fallbacks if strictly requested, 
+                        // though system mandates tailwind classes. Using closest matches for the requested specific hexes in the prompt.
+                        "urgent-bg": "#ffdad6", // mapped to error-container
+                        "urgent-text": "#ba1a1a", // mapped to error
+                        "success-bg": "#e2e2e2", // using a surface token instead of arbitrary green as per system limits
+                        "success-text": "#1a1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px",
+                        "hw-card": "16px",
+                        "pill": "50px",
+                        "btn": "10px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    "fontSize": {}
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #f9f9f9; color: #1a1c1c; }
+        h1, h2, h3, h4, h5, h6, .display, .headline, .label { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased flex h-screen overflow-hidden">
+<!-- SideNavBar (from JSON) -->
+<nav class="hidden md:flex flex-col py-6 gap-2 fixed left-0 top-0 h-screen w-[240px] bg-surface-container-lowest text-primary shadow-[0_8px_32px_rgba(26,28,28,0.06)] z-20">
+<div class="px-6 pb-6 mb-2 border-b-0">
+<h1 class="text-2xl font-black text-primary-container font-display tracking-tighter">onebilim</h1>
+<p class="text-xs text-on-surface-variant font-body opacity-70">Admin Portal</p>
+</div>
+<div class="flex-1 overflow-y-auto w-full px-2">
+<!-- Items -->
+<a class="flex items-center gap-4 text-on-surface opacity-70 hover:opacity-100 px-4 py-3 font-label uppercase tracking-widest text-[10px] hover:bg-surface rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span>Home</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface opacity-70 hover:opacity-100 px-4 py-3 font-label uppercase tracking-widest text-[10px] hover:bg-surface rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="sports_score">sports_score</span>
+<span>Marathons</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface opacity-70 hover:opacity-100 px-4 py-3 font-label uppercase tracking-widest text-[10px] hover:bg-surface rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Students</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface opacity-70 hover:opacity-100 px-4 py-3 font-label uppercase tracking-widest text-[10px] hover:bg-surface rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span>Curators</span>
+</a>
+<a class="flex items-center gap-4 bg-primary-container text-on-primary rounded-full mx-2 font-bold px-4 py-3 font-label uppercase tracking-widest text-[10px] transition-transform duration-200 ease-out scale-105 shadow-sm" href="#">
+<span class="material-symbols-outlined" data-icon="assignment_turned_in">assignment_turned_in</span>
+<span>HW Review</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface opacity-70 hover:opacity-100 px-4 py-3 font-label uppercase tracking-widest text-[10px] hover:bg-surface rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span>Chat Monitoring</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface opacity-70 hover:opacity-100 px-4 py-3 font-label uppercase tracking-widest text-[10px] hover:bg-surface rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span>Statistics</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface opacity-70 hover:opacity-100 px-4 py-3 font-label uppercase tracking-widest text-[10px] hover:bg-surface rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span>Tariffs</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface opacity-70 hover:opacity-100 px-4 py-3 font-label uppercase tracking-widest text-[10px] hover:bg-surface rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span>Stories</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-[240px] flex flex-col h-screen overflow-hidden bg-surface relative">
+<!-- TopAppBar (from JSON + Responsive integration) -->
+<header class="flex justify-between items-center px-8 w-full bg-surface/80 backdrop-blur-xl docked full-width top-0 h-16 shadow-none flat no-line layering z-10 sticky top-0">
+<div class="flex items-center gap-4">
+<button class="md:hidden p-2 -ml-2 text-on-surface hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h2 class="text-xl font-bold text-primary-container font-headline tracking-tighter md:hidden">onebilim</h2>
+<!-- Search on left as per JSON -->
+<div class="hidden md:flex items-center bg-surface-container-low rounded-full px-4 py-2 h-10 w-64 hover:bg-surface-container transition-colors focus-within:bg-surface-container-highest focus-within:ring-2 focus-within:ring-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-body w-full text-on-surface placeholder-on-surface-variant/60" placeholder="Іздеу..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface hover:bg-surface-container-high transition-colors rounded-full scale-95 active:opacity-80">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface hover:bg-surface-container-high transition-colors rounded-full scale-95 active:opacity-80">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="p-2 text-on-surface hover:bg-surface-container-high transition-colors rounded-full scale-95 active:opacity-80">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary-fixed-dim ml-2 flex items-center justify-center text-on-primary-fixed font-bold text-sm overflow-hidden shrink-0">
+<img alt="Admin Avatar" class="w-full h-full object-cover" data-alt="Admin user profile avatar image, simple headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnTCHGZyZhb7eaUl3dPPpeOKFJgAv6SVemTRaVLSP_ywAqbOr1luPIylcDzvJuQK_F3z-rP2rSg7R76yN_OXQFMBioqTnQrN5d4PHHtJeDeQ9ZFvMIMYSqt2aVG3g54uK-h2mKbr8gI6YtIzsZivQYDCxVgSV3izSb-FZfprGPlogT1F-NeggW48SYNVdcZSWXzSExSlyups21HHxJRJ9V1OIGIuu5_zljIuzk4UClYrfrenEjU8Vo9HV6U7USXdJnKkOgXO5t2vs-"/>
+</div>
+</div>
+</header>
+<!-- Canvas Area -->
+<div class="flex-1 overflow-y-auto p-4 md:p-8 w-full max-w-[1200px] mx-auto">
+<!-- Page Header -->
+<div class="mb-8 pl-2">
+<h1 class="text-3xl font-display font-bold text-on-surface tracking-tight mb-2">ҮТ тексеру</h1>
+</div>
+<!-- Top Filter Bar -->
+<div class="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4 mb-8">
+<!-- Filter Pills -->
+<div class="flex flex-wrap gap-2">
+<button class="h-[36px] px-5 rounded-pill bg-primary-container text-on-primary font-headline text-[13px] font-semibold transition-transform hover:scale-[0.98] shadow-sm">
+                        Барлығы (34)
+                    </button>
+<button class="h-[36px] px-5 rounded-pill bg-surface-container-lowest text-on-surface-variant font-headline text-[13px] border border-outline-variant/30 hover:bg-surface-container-high transition-colors">
+                        Тексерілуде (18)
+                    </button>
+<button class="h-[36px] px-5 rounded-pill bg-surface-container-lowest text-on-surface-variant font-headline text-[13px] border border-outline-variant/30 hover:bg-surface-container-high transition-colors">
+                        Доработка (8)
+                    </button>
+<button class="h-[36px] px-5 rounded-pill bg-surface-container-lowest text-on-surface-variant font-headline text-[13px] border border-outline-variant/30 hover:bg-surface-container-high transition-colors">
+                        Қабылданды
+                    </button>
+<button class="h-[36px] px-5 rounded-pill bg-surface-container-lowest text-on-surface-variant font-headline text-[13px] border border-outline-variant/30 hover:bg-surface-container-high transition-colors">
+                        Қабылданбады
+                    </button>
+</div>
+<!-- Dropdowns -->
+<div class="flex flex-wrap gap-3 w-full xl:w-auto">
+<div class="relative flex-1 xl:flex-none">
+<button class="w-full h-[36px] px-4 rounded-lg bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-between gap-2 text-[13px] font-body text-on-surface hover:bg-surface-container-high transition-colors">
+<span>Марафон: Барлығы</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+<div class="relative flex-1 xl:flex-none">
+<button class="w-full h-[36px] px-4 rounded-lg bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-between gap-2 text-[13px] font-body text-on-surface hover:bg-surface-container-high transition-colors">
+<span>Куратор: Барлығы</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<!-- HW Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+<!-- Card 1 (Urgent) -->
+<div class="bg-surface-container-lowest rounded-hw-card p-5 hover:scale-[0.99] transition-transform duration-200 shadow-[0_4px_16px_rgba(26,28,28,0.03)] border border-surface-container-high/50 flex flex-col gap-4">
+<!-- Top Row -->
+<div class="flex justify-between items-center">
+<span class="bg-error-container text-error px-3 py-1 rounded-pill text-[11px] font-bold font-headline flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+                            2 күн өтті
+                        </span>
+<span class="text-[12px] font-body text-on-surface-variant">IELTS · Сабақ 4</span>
+</div>
+<!-- Student Row -->
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-sm shrink-0">
+                            АБ
+                        </div>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-[14px] text-on-surface">Айгерим Бекова</span>
+<span class="font-body text-[12px] text-on-surface-variant">Куратор: Мисс Дана</span>
+</div>
+</div>
+<!-- Task -->
+<div class="bg-surface p-3 rounded-lg border border-outline-variant/15">
+<p class="font-body text-[13px] text-on-surface-variant italic">
+                            "Тапсырма: Main idea туралы 150-200 сөз эссе жазыңыз."
+                        </p>
+</div>
+<!-- Submission Preview -->
+<div>
+<p class="font-body text-[14px] text-on-surface leading-relaxed line-clamp-2">
+                            The concept of AI has been a subject of fascination and debate for decades. While some argue it will bring unprecedented prosperity...
+                        </p>
+</div>
+<!-- Attachments -->
+<div class="flex flex-wrap gap-2 mt-auto">
+<div class="bg-surface border border-outline-variant/30 rounded-pill px-3 py-1.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">description</span>
+<span class="font-body text-[12px] text-on-surface-variant">essay_draft.pdf · 2.4MB</span>
+</div>
+<div class="bg-surface border border-outline-variant/30 rounded-pill px-3 py-1.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">mic</span>
+<span class="font-body text-[12px] text-on-surface-variant">voice_01.mp3 · 0:45</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="grid grid-cols-3 gap-2 mt-3 pt-4 border-t border-surface-container-high/50">
+<button class="h-10 rounded-btn bg-surface-container-low text-on-surface font-headline font-bold text-[13px] hover:bg-surface-variant transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check</span>
+                            Қабылдау
+                        </button>
+<button class="h-10 rounded-btn bg-secondary-fixed text-on-secondary-fixed font-headline font-bold text-[13px] hover:bg-secondary-fixed-dim transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+                            Доработка
+                        </button>
+<button class="h-10 rounded-btn bg-error-container text-error font-headline font-bold text-[13px] hover:bg-error-container/80 transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">close</span>
+                            Қабылданбау
+                        </button>
+</div>
+</div>
+<!-- Card 2 (Normal) -->
+<div class="bg-surface-container-lowest rounded-hw-card p-5 hover:scale-[0.99] transition-transform duration-200 shadow-[0_4px_16px_rgba(26,28,28,0.03)] border border-surface-container-high/50 flex flex-col gap-4">
+<!-- Top Row -->
+<div class="flex justify-between items-center">
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-pill text-[11px] font-bold font-headline">
+                            Бүгін тапсырылды
+                        </span>
+<span class="text-[12px] font-body text-on-surface-variant">General English · Сабақ 12</span>
+</div>
+<!-- Student Row -->
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold text-sm shrink-0">
+                            ДА
+                        </div>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-[14px] text-on-surface">Диас Амангелді</span>
+<span class="font-body text-[12px] text-on-surface-variant">Куратор: Асхат А.</span>
+</div>
+</div>
+<!-- Task -->
+<div class="bg-surface p-3 rounded-lg border border-outline-variant/15">
+<p class="font-body text-[13px] text-on-surface-variant italic">
+                            "Тапсырма: Present Perfect шағына 10 сөйлем құрастыру."
+                        </p>
+</div>
+<!-- Submission Preview -->
+<div>
+<p class="font-body text-[14px] text-on-surface leading-relaxed line-clamp-2">
+                            1. I have never been to Paris. 2. She has just finished her homework. 3. They have lived here since 2010...
+                        </p>
+</div>
+<!-- Attachments -->
+<div class="flex flex-wrap gap-2 mt-auto">
+<div class="bg-surface border border-outline-variant/30 rounded-pill px-3 py-1.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">image</span>
+<span class="font-body text-[12px] text-on-surface-variant">notebook_photo.jpg · 1.2MB</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="grid grid-cols-3 gap-2 mt-3 pt-4 border-t border-surface-container-high/50">
+<button class="h-10 rounded-btn bg-surface-container-low text-on-surface font-headline font-bold text-[13px] hover:bg-surface-variant transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check</span>
+                            Қабылдау
+                        </button>
+<button class="h-10 rounded-btn bg-secondary-fixed text-on-secondary-fixed font-headline font-bold text-[13px] hover:bg-secondary-fixed-dim transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+                            Доработка
+                        </button>
+<button class="h-10 rounded-btn bg-error-container text-error font-headline font-bold text-[13px] hover:bg-error-container/80 transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">close</span>
+                            Қабылданбау
+                        </button>
+</div>
+</div>
+<!-- Generate a few more similar cards to fill the view -->
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-hw-card p-5 hover:scale-[0.99] transition-transform duration-200 shadow-[0_4px_16px_rgba(26,28,28,0.03)] border border-surface-container-high/50 flex flex-col gap-4 opacity-70">
+<div class="absolute inset-0 bg-surface-container-lowest/40 rounded-hw-card z-10 pointer-events-none flex items-center justify-center backdrop-blur-[1px]">
+<span class="bg-surface-variant text-on-surface px-4 py-2 rounded-full font-headline text-sm font-bold shadow-sm">Доработкада</span>
+</div>
+<!-- Content similar to above but greyed out slightly -->
+<div class="flex justify-between items-center">
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-pill text-[11px] font-bold font-headline">Кеше</span>
+<span class="text-[12px] font-body text-on-surface-variant">IELTS Reading</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-sm shrink-0">
+                            МС
+                        </div>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-[14px] text-on-surface">Меруерт Сәбит</span>
+<span class="font-body text-[12px] text-on-surface-variant">Куратор: Мисс Дана</span>
+</div>
+</div>
+<div class="bg-surface p-3 rounded-lg border border-outline-variant/15">
+<p class="font-body text-[13px] text-on-surface-variant italic">"Тапсырма: True/False/Not Given"</p>
+</div>
+<div>
+<p class="font-body text-[14px] text-on-surface leading-relaxed line-clamp-2">Answers attached in PDF.</p>
+</div>
+<div class="flex flex-wrap gap-2 mt-auto">
+<div class="bg-surface border border-outline-variant/30 rounded-pill px-3 py-1.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">description</span>
+<span class="font-body text-[12px] text-on-surface-variant">reading_answers.pdf</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

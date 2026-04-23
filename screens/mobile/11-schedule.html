@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="kk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>1Bilim - Кесте</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1a1c1c",
+                        "on-secondary-container": "#694000",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#663e00",
+                        "surface-container-low": "#f3f3f3",
+                        "on-tertiary-container": "#003559",
+                        "on-surface": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "surface-bright": "#f9f9f9",
+                        "primary-fixed-dim": "#ffb691",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary": "#00629f",
+                        "on-surface-variant": "#594136",
+                        "outline": "#8d7164",
+                        "secondary-container": "#fda625",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#ffddb9",
+                        "surface-tint": "#9e4200",
+                        "primary-fixed": "#ffdbcb",
+                        "secondary": "#865300",
+                        "inverse-primary": "#ffb691",
+                        "primary-container": "#ff6f00",
+                        "tertiary-container": "#08a1ff",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#793100",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container": "#eeeeee",
+                        "primary": "#9e4200",
+                        "tertiary-fixed": "#cfe4ff",
+                        "tertiary-fixed-dim": "#9acbff",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary-container": "#592200",
+                        "on-tertiary-fixed": "#001d34",
+                        "outline-variant": "#e1bfb0",
+                        "on-primary-fixed": "#341100",
+                        "on-tertiary-fixed-variant": "#004a79",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed": "#2b1700",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed-dim": "#ffb961"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .bg-shift-no-border {
+                @apply border-none shadow-none bg-[#F9F9F9];
+            }
+            .flat-no-shadows {
+                @apply shadow-none;
+            }
+            .press-scale-effect {
+                @apply active:scale-95 transition-transform;
+            }
+            .layer-card {
+                @apply bg-surface-container-lowest rounded-DEFAULT;
+            }
+            .ambient-shadow {
+                @apply shadow-[0_8px_32px_rgba(26,28,28,0.06)];
+            }
+            .ghost-border {
+                @apply border border-outline-variant/15;
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary pb-32">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-40 bg-shift-no-border flat-no-shadows">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<button class="text-gray-400 hover:opacity-80 transition-opacity press-scale-effect flex items-center justify-center p-2 -ml-2 rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<h1 class="font-headline font-semibold tracking-tight text-xl text-[#9E4200]">Кесте</h1>
+<button class="text-orange-700 hover:opacity-80 transition-opacity press-scale-effect flex items-center justify-center p-2 -mr-2 bg-primary-fixed rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add</span>
+</button>
+</div>
+</header>
+<main class="max-w-md mx-auto px-6 pt-2 pb-12 flex flex-col gap-8">
+<!-- Week Switcher -->
+<section class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h2 class="font-headline font-bold text-2xl tracking-tight text-on-surface">Сәуір 2026</h2>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- 7-day strip -->
+<div class="flex justify-between items-start">
+<!-- Day 1 -->
+<button class="flex flex-col items-center gap-2 group">
+<span class="font-label text-[10px] tracking-widest text-on-surface-variant opacity-60 uppercase">Дс</span>
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-headline font-semibold text-on-surface bg-transparent group-hover:bg-surface-container-highest transition-colors">15</div>
+</button>
+<!-- Day 2 -->
+<button class="flex flex-col items-center gap-2 group">
+<span class="font-label text-[10px] tracking-widest text-on-surface-variant opacity-60 uppercase">Сс</span>
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-headline font-semibold text-on-surface bg-transparent group-hover:bg-surface-container-highest transition-colors">16</div>
+<div class="w-1 h-1 rounded-full bg-tertiary"></div>
+</button>
+<!-- Day 3 -->
+<button class="flex flex-col items-center gap-2 group">
+<span class="font-label text-[10px] tracking-widest text-on-surface-variant opacity-60 uppercase">Ср</span>
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-headline font-semibold text-on-surface bg-transparent group-hover:bg-surface-container-highest transition-colors">17</div>
+</button>
+<!-- Day 4 -->
+<button class="flex flex-col items-center gap-2 group">
+<span class="font-label text-[10px] tracking-widest text-on-surface-variant opacity-60 uppercase">Бс</span>
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-headline font-semibold text-on-surface bg-transparent group-hover:bg-surface-container-highest transition-colors">18</div>
+<div class="flex gap-0.5">
+<div class="w-1 h-1 rounded-full bg-primary-container"></div>
+<div class="w-1 h-1 rounded-full bg-secondary-container"></div>
+</div>
+</button>
+<!-- Day 5 -->
+<button class="flex flex-col items-center gap-2 group">
+<span class="font-label text-[10px] tracking-widest text-on-surface-variant opacity-60 uppercase">Жм</span>
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-headline font-semibold text-on-surface bg-transparent group-hover:bg-surface-container-highest transition-colors">19</div>
+</button>
+<!-- Day 6 -->
+<button class="flex flex-col items-center gap-2 group">
+<span class="font-label text-[10px] tracking-widest text-on-surface-variant opacity-60 uppercase">Сн</span>
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-headline font-semibold text-on-surface bg-transparent group-hover:bg-surface-container-highest transition-colors">20</div>
+<div class="w-1 h-1 rounded-full bg-outline"></div>
+</button>
+<!-- Day 7 (Today) -->
+<button class="flex flex-col items-center gap-2">
+<span class="font-label text-[10px] tracking-widest text-primary uppercase font-bold">Жк</span>
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-headline font-bold text-on-primary bg-primary-container shadow-[0_4px_12px_rgba(255,111,0,0.3)]">21</div>
+<div class="flex gap-0.5">
+<div class="w-1 h-1 rounded-full bg-tertiary"></div>
+<div class="w-1 h-1 rounded-full bg-[#10b981]"></div>
+<div class="w-1 h-1 rounded-full bg-primary-container"></div>
+</div>
+</button>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="flex flex-col gap-6 relative">
+<h3 class="font-headline font-bold text-lg text-on-surface sticky top-[72px] bg-background py-2 z-10">Бүгін · 21 сәуір</h3>
+<div class="relative flex flex-col gap-8">
+<!-- Timeline Line -->
+<div class="absolute left-[39px] top-4 bottom-4 w-px bg-surface-container-highest z-0"></div>
+<!-- Event 1 (Live) -->
+<div class="relative z-10 flex gap-4 w-full">
+<div class="w-16 flex-shrink-0 text-right pt-4">
+<span class="font-headline font-bold text-lg text-on-surface leading-none block">10:00</span>
+<span class="font-body text-xs text-on-surface-variant opacity-70">11:30</span>
+</div>
+<div class="flex-grow layer-card ghost-border overflow-hidden relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="p-4 pl-5 flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div class="px-3 py-1 bg-tertiary-fixed rounded-full text-on-tertiary-container font-label text-[10px] font-bold tracking-widest uppercase inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">videocam</span> Live сабақ
+                                </div>
+</div>
+<h4 class="font-headline font-semibold text-on-surface text-base">IELTS · Listening skills</h4>
+<button class="mt-2 w-full bg-tertiary-fixed-dim/20 text-tertiary hover:bg-tertiary-fixed-dim/30 transition-colors py-3 px-4 rounded-xl font-headline font-semibold text-sm flex items-center justify-between">
+<span>Google Meet</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Event 2 (Speaking Room) -->
+<div class="relative z-10 flex gap-4 w-full">
+<div class="w-16 flex-shrink-0 text-right pt-4">
+<span class="font-headline font-bold text-lg text-on-surface leading-none block">14:00</span>
+<span class="font-body text-xs text-on-surface-variant opacity-70">15:00</span>
+</div>
+<div class="flex-grow layer-card ghost-border overflow-hidden relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-[#10b981]"></div>
+<div class="p-4 pl-5 flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div class="px-3 py-1 bg-[#10b981]/10 rounded-full text-[#047857] font-label text-[10px] font-bold tracking-widest uppercase inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">mic</span> Speaking Room
+                                </div>
+</div>
+<h4 class="font-headline font-semibold text-on-surface text-base">B1-B2 · Free talk</h4>
+<button class="mt-2 w-full bg-[#10b981]/10 text-[#047857] hover:bg-[#10b981]/20 transition-colors py-3 px-4 rounded-xl font-headline font-semibold text-sm flex items-center justify-between">
+<span>Қосылу</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Event 3 (Webinar) -->
+<div class="relative z-10 flex gap-4 w-full">
+<div class="w-16 flex-shrink-0 text-right pt-4">
+<span class="font-headline font-bold text-lg text-on-surface leading-none block">16:30</span>
+<span class="font-body text-xs text-on-surface-variant opacity-70">18:00</span>
+</div>
+<div class="flex-grow layer-card ghost-border overflow-hidden relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container"></div>
+<div class="p-4 pl-5 flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div class="px-3 py-1 bg-primary-fixed rounded-full text-on-primary-fixed-variant font-label text-[10px] font-bold tracking-widest uppercase inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">campaign</span> Вебинар
+                                </div>
+</div>
+<h4 class="font-headline font-semibold text-on-surface text-base">IELTS Writing Workshop</h4>
+</div>
+</div>
+</div>
+<!-- Event 4 (Personal) -->
+<div class="relative z-10 flex gap-4 w-full">
+<div class="w-16 flex-shrink-0 text-right pt-4">
+<span class="font-headline font-bold text-lg text-on-surface leading-none block opacity-50">20:00</span>
+</div>
+<div class="flex-grow layer-card ghost-border overflow-hidden relative opacity-75 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline"></div>
+<div class="p-4 pl-5 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="px-3 py-1 bg-surface-container-high rounded-full text-on-surface-variant font-label text-[10px] font-bold tracking-widest uppercase inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">push_pin</span> Жеке
+                                </div>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<h4 class="font-headline text-on-surface text-base">Vocabulary review</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-6 left-4 right-4 rounded-[32px] h-[64px] z-50 tonal layer stacking without lines shadow-[0_8px_32px_rgba(26,28,28,0.06)] bg-white/70 dark:bg-white/70 backdrop-blur-xl">
+<div class="w-full h-full px-6 flex justify-around items-center">
+<button class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200 rounded-2xl px-4 py-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200 rounded-2xl px-4 py-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu_book</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase mt-1">Lessons</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200 rounded-2xl px-4 py-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">forum</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase mt-1">Chat</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-orange-50 text-orange-700 rounded-2xl px-4 py-1 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase mt-1">Profile</span>
+</button>
+</div>
+</nav>
+</body></html>

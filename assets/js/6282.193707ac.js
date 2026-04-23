@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk_1_bilim_docs=globalThis.webpackChunk_1_bilim_docs||[]).push([[6282],{6282(e,i,s){s.d(i,{createTreemapServices:()=>a.d});var a=s(6609);s(2519)}}]);

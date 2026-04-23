@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html lang="kk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OneBilim - Кесте</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#f3f3f3",
+                      "tertiary-container": "#08a1ff",
+                      "surface-container-high": "#e8e8e8",
+                      "on-secondary-fixed-variant": "#663e00",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#cfe4ff",
+                      "surface-tint": "#9e4200",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#ffdbcb",
+                      "primary": "#9e4200",
+                      "on-tertiary-fixed-variant": "#004a79",
+                      "tertiary": "#00629f",
+                      "surface-container": "#eeeeee",
+                      "primary-fixed-dim": "#ffb691",
+                      "on-tertiary-fixed": "#001d34",
+                      "secondary-fixed": "#ffddb9",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#592200",
+                      "secondary": "#865300",
+                      "on-secondary-container": "#694000",
+                      "on-background": "#1a1c1c",
+                      "surface-dim": "#dadada",
+                      "outline": "#8d7164",
+                      "on-error": "#ffffff",
+                      "surface-variant": "#e2e2e2",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#e1bfb0",
+                      "on-surface": "#1a1c1c",
+                      "inverse-on-surface": "#f1f1f1",
+                      "on-secondary-fixed": "#2b1700",
+                      "error-container": "#ffdad6",
+                      "inverse-surface": "#2f3131",
+                      "secondary-fixed-dim": "#ffb961",
+                      "on-primary-fixed-variant": "#793100",
+                      "on-error-container": "#93000a",
+                      "background": "#f9f9f9",
+                      "surface": "#f9f9f9",
+                      "secondary-container": "#fda625",
+                      "on-surface-variant": "#594136",
+                      "inverse-primary": "#ffb691",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-highest": "#e2e2e2",
+                      "surface-bright": "#f9f9f9",
+                      "tertiary-fixed-dim": "#9acbff",
+                      "primary-container": "#ff6f00",
+                      "on-tertiary-container": "#003559",
+                      "on-primary-fixed": "#341100"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body": [
+                              "Manrope"
+                      ],
+                      "label": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {}
+      },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #f9f9f9; color: #1a1c1c; }
+        h1, h2, h3, h4, h5, h6, .font-headline, .font-display, .font-label { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-screen w-[240px] flex flex-col bg-[#F9F9F9] dark:bg-neutral-900 z-50">
+<div class="p-6">
+<div class="text-2xl font-bold tracking-tight text-[#9E4200] dark:text-[#FF6F00] font-display flex items-center gap-2">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                OneBilim
+            </div>
+<div class="text-xs text-neutral-500 font-label tracking-wider uppercase mt-1">The Radiant Scholar</div>
+</div>
+<div class="px-4 pb-4">
+<div class="flex items-center gap-3 p-3 bg-surface-container-lowest rounded-xl mb-6 shadow-sm border border-outline-variant/15">
+<img alt="Student profile avatar" class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of a young man with a slight smile, bright lighting, soft blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQUMEjRkjNoc-WSs1tIY8OS0cskAypCyQBYpCEcQQyfO8bJCaKMe0FGwY4hkTt96mB86Mei5WpI1gAhqWwDXfcM3xV6aDryi1V71ja5ZL4TJTKBu9eeb7rezrYqMYmMGP1eeugDip-r4RHESSCneDgOqWuerxo2L4Dv6mTZrbS02SBQoprz-QCnpCLNQi5wbDBUHw3LNqLtuYH8x6R8mbmgk_Kk4pBtxoOYFViix5IZzZLXHJmaPSI9Zuq4MYVo9SCqHhsWsIfO9lg"/>
+<div>
+<div class="font-headline font-semibold text-sm">Айдар С.</div>
+<div class="text-xs text-on-surface-variant">Студент</div>
+</div>
+</div>
+</div>
+<div class="flex-1 px-3 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-neutral-600 dark:text-neutral-400 hover:bg-[#E8E8E8] dark:hover:bg-neutral-800 transition-colors rounded-xl scale-95 duration-200 transition-transform font-body font-medium" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-neutral-600 dark:text-neutral-400 hover:bg-[#E8E8E8] dark:hover:bg-neutral-800 transition-colors rounded-xl scale-95 duration-200 transition-transform font-body font-medium" href="#">
+<span class="material-symbols-outlined">school</span>
+                My Courses
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-neutral-600 dark:text-neutral-400 hover:bg-[#E8E8E8] dark:hover:bg-neutral-800 transition-colors rounded-xl scale-95 duration-200 transition-transform font-body font-medium" href="#">
+<span class="material-symbols-outlined">local_library</span>
+                Library
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#FFFFFF] dark:bg-neutral-800 text-[#9E4200] dark:text-[#FF6F00] rounded-xl shadow-[0_8px_32px_rgba(26,28,28,0.06)] scale-95 duration-200 transition-transform font-body font-semibold" href="#">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+                Schedule
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-neutral-600 dark:text-neutral-400 hover:bg-[#E8E8E8] dark:hover:bg-neutral-800 transition-colors rounded-xl scale-95 duration-200 transition-transform font-body font-medium" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+                Progress
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 ml-[240px] flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 h-16 z-40 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(26,28,28,0.06)] flex justify-between items-center px-8 w-[calc(100%-240px)]">
+<div class="flex items-center gap-4">
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg text-[#9E4200] dark:text-[#FF6F00]">Кесте</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-neutral-500 hover:text-[#FF6F00] transition-colors p-2 rounded-full scale-98 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-neutral-500 hover:text-[#FF6F00] transition-colors p-2 rounded-full scale-98 duration-200">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Page Content -->
+<div class="pt-24 px-8 pb-12 flex-1 flex gap-8">
+<!-- Calendar Section -->
+<div class="flex-1 flex flex-col">
+<!-- Calendar Toolbar -->
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-xl hover:bg-surface-container-high transition-colors text-on-surface">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface">Сәуір 2026</h2>
+<button class="p-2 rounded-xl hover:bg-surface-container-high transition-colors text-on-surface">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex bg-surface-container-high rounded-xl p-1">
+<button class="px-4 py-1.5 rounded-lg text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors">Ай</button>
+<button class="px-4 py-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-sm text-sm font-bold">Апта</button>
+<button class="px-4 py-1.5 rounded-lg text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors">Күн</button>
+</div>
+<button class="flex items-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-xl font-headline font-semibold text-sm hover:opacity-90 transition-opacity shadow-[0_4px_12px_rgba(158,66,0,0.2)]">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                            Жеке оқиға
+                        </button>
+</div>
+</div>
+<!-- Week Grid -->
+<div class="bg-surface-container-lowest rounded-[24px] shadow-[0_8px_32px_rgba(26,28,28,0.06)] flex-1 flex flex-col overflow-hidden border border-outline-variant/15">
+<!-- Days Header -->
+<div class="grid grid-cols-7 border-b border-surface-variant/50">
+<div class="py-4 text-center">
+<div class="text-xs font-label uppercase tracking-wider text-on-surface-variant mb-1">Дс</div>
+<div class="font-headline font-semibold text-lg text-on-surface">20</div>
+</div>
+<div class="py-4 text-center">
+<div class="text-xs font-label uppercase tracking-wider text-on-surface-variant mb-1">Сс</div>
+<div class="font-headline font-semibold text-lg text-on-surface">21</div>
+</div>
+<div class="py-4 text-center">
+<div class="text-xs font-label uppercase tracking-wider text-on-surface-variant mb-1">Ср</div>
+<div class="font-headline font-semibold text-lg text-on-surface">22</div>
+</div>
+<div class="py-4 text-center relative">
+<!-- Today Highlight -->
+<div class="absolute inset-0 bg-primary/5 rounded-t-2xl"></div>
+<div class="relative z-10">
+<div class="text-xs font-label uppercase tracking-wider text-primary mb-1 font-bold">Бс</div>
+<div class="w-8 h-8 mx-auto bg-primary text-on-primary rounded-full flex items-center justify-center font-headline font-bold text-lg">23</div>
+</div>
+</div>
+<div class="py-4 text-center">
+<div class="text-xs font-label uppercase tracking-wider text-on-surface-variant mb-1">Жм</div>
+<div class="font-headline font-semibold text-lg text-on-surface">24</div>
+</div>
+<div class="py-4 text-center">
+<div class="text-xs font-label uppercase tracking-wider text-on-surface-variant mb-1">Сн</div>
+<div class="font-headline font-semibold text-lg text-on-surface">25</div>
+</div>
+<div class="py-4 text-center">
+<div class="text-xs font-label uppercase tracking-wider text-on-surface-variant mb-1">Жс</div>
+<div class="font-headline font-semibold text-lg text-on-surface">26</div>
+</div>
+</div>
+<!-- Time Grid Container -->
+<div class="flex-1 flex overflow-y-auto relative min-h-[600px]">
+<!-- Time Axis -->
+<div class="w-16 flex-shrink-0 border-r border-surface-variant/50 pt-4">
+<div class="h-20 text-xs text-on-surface-variant text-right pr-3 -mt-2">09:00</div>
+<div class="h-20 text-xs text-on-surface-variant text-right pr-3 -mt-2">10:00</div>
+<div class="h-20 text-xs text-on-surface-variant text-right pr-3 -mt-2">11:00</div>
+<div class="h-20 text-xs text-on-surface-variant text-right pr-3 -mt-2">12:00</div>
+<div class="h-20 text-xs text-on-surface-variant text-right pr-3 -mt-2">13:00</div>
+<div class="h-20 text-xs text-on-surface-variant text-right pr-3 -mt-2">14:00</div>
+<div class="h-20 text-xs text-on-surface-variant text-right pr-3 -mt-2">15:00</div>
+<div class="h-20 text-xs text-on-surface-variant text-right pr-3 -mt-2">16:00</div>
+</div>
+<!-- Grid Lines & Events -->
+<div class="flex-1 relative">
+<!-- Horizontal Lines -->
+<div class="absolute inset-0 flex flex-col pointer-events-none">
+<div class="h-20 border-b border-surface-variant/30"></div>
+<div class="h-20 border-b border-surface-variant/30"></div>
+<div class="h-20 border-b border-surface-variant/30"></div>
+<div class="h-20 border-b border-surface-variant/30"></div>
+<div class="h-20 border-b border-surface-variant/30"></div>
+<div class="h-20 border-b border-surface-variant/30"></div>
+<div class="h-20 border-b border-surface-variant/30"></div>
+<div class="h-20 border-b border-surface-variant/30"></div>
+</div>
+<!-- Vertical Column Dividers -->
+<div class="absolute inset-0 grid grid-cols-7 pointer-events-none">
+<div class="border-r border-surface-variant/30"></div>
+<div class="border-r border-surface-variant/30"></div>
+<div class="border-r border-surface-variant/30"></div>
+<div class="border-r border-surface-variant/30 bg-primary/5"></div> <!-- Today bg -->
+<div class="border-r border-surface-variant/30"></div>
+<div class="border-r border-surface-variant/30"></div>
+<div></div>
+</div>
+<!-- Current Time Line -->
+<div class="absolute w-full top-[260px] z-20 pointer-events-none flex items-center">
+<div class="w-full border-t-2 border-primary border-dashed"></div>
+<div class="absolute -left-2 w-4 h-4 bg-primary rounded-full"></div>
+</div>
+<!-- Events Grid (Col/Row based absolute positioning for demo) -->
+<div class="absolute inset-0 p-1">
+<!-- Event: Live Lesson (Col 1, Row 2) -->
+<div class="absolute top-[80px] left-[1%] w-[13%] h-[115px] bg-tertiary-fixed rounded-xl p-2 border border-tertiary/20 cursor-pointer hover:shadow-md transition-shadow">
+<div class="text-[10px] font-label font-bold text-tertiary uppercase tracking-wider mb-1 flex items-center gap-1">
+<div class="w-1.5 h-1.5 rounded-full bg-tertiary"></div> Live
+                                    </div>
+<div class="text-xs font-headline font-semibold text-on-surface leading-tight mb-1">Advanced English Grammar</div>
+<div class="text-[10px] text-on-surface-variant">10:00 - 11:30</div>
+</div>
+<!-- Event: Speaking Room (Col 3, Row 4) -->
+<div class="absolute top-[240px] left-[29.5%] w-[13%] h-[75px] bg-[#E8F5E9] rounded-xl p-2 border border-[#4CAF50]/20 cursor-pointer hover:shadow-md transition-shadow">
+<div class="text-[10px] font-label font-bold text-[#2E7D32] uppercase tracking-wider mb-1 flex items-center gap-1">
+<div class="w-1.5 h-1.5 rounded-full bg-[#4CAF50]"></div> Speaking
+                                    </div>
+<div class="text-xs font-headline font-semibold text-on-surface leading-tight mb-1">IELTS Prep Group</div>
+<div class="text-[10px] text-on-surface-variant">12:00 - 13:00</div>
+</div>
+<!-- Event: Selected (Today, Col 4, Row 3) -->
+<div class="absolute top-[180px] left-[43.8%] w-[13%] h-[115px] bg-primary-fixed rounded-xl p-2 border-2 border-primary shadow-[0_4px_16px_rgba(158,66,0,0.15)] cursor-pointer z-10 transform scale-105">
+<div class="text-[10px] font-label font-bold text-primary uppercase tracking-wider mb-1 flex items-center gap-1">
+<div class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div> Live
+                                    </div>
+<div class="text-xs font-headline font-semibold text-on-surface leading-tight mb-1">Kazakh Literature &amp; Culture</div>
+<div class="text-[10px] text-on-surface-variant font-medium">11:15 - 12:45</div>
+</div>
+<!-- Event: Personal (Col 6, Row 6) -->
+<div class="absolute top-[400px] left-[72.4%] w-[13%] h-[75px] bg-surface-variant/50 rounded-xl p-2 border border-outline-variant/30 cursor-pointer hover:shadow-md transition-shadow">
+<div class="text-[10px] font-label font-bold text-on-surface-variant uppercase tracking-wider mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">person</span> Жеке
+                                    </div>
+<div class="text-xs font-headline font-semibold text-on-surface leading-tight mb-1">Homework Review</div>
+<div class="text-[10px] text-on-surface-variant">14:00 - 15:00</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Detail Panel -->
+<aside class="w-[320px] flex-shrink-0 flex flex-col gap-6">
+<!-- Selected Event Card -->
+<div class="bg-surface-container-lowest rounded-[24px] p-6 shadow-[0_8px_32px_rgba(26,28,28,0.06)] border border-outline-variant/15 relative overflow-hidden">
+<!-- Decorative blur -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-4">
+<span class="bg-primary-fixed text-primary text-xs font-bold font-label uppercase tracking-widest px-3 py-1 rounded-full border border-primary/20">Live Lesson</span>
+<button class="text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<h3 class="font-headline text-xl font-bold leading-tight mb-2 text-on-surface">Kazakh Literature &amp; Culture</h3>
+<div class="flex items-center gap-2 text-sm text-on-surface-variant font-medium mb-6">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+                            Бүгін, 11:15 - 12:45
+                        </div>
+<div class="space-y-4 mb-8">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">person</span>
+</div>
+<div>
+<div class="text-xs text-on-surface-variant font-label uppercase tracking-wider mb-0.5">Оқытушы</div>
+<div class="text-sm font-semibold text-on-surface">Проф. Алия Нурова</div>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">description</span>
+</div>
+<div>
+<div class="text-xs text-on-surface-variant font-label uppercase tracking-wider mb-0.5">Материалдар</div>
+<a class="text-sm font-semibold text-tertiary hover:underline" href="#">Модуль 3 PDF жүктеп алу</a>
+</div>
+</div>
+</div>
+<button class="w-full bg-gradient-to-b from-secondary-container to-primary-container text-on-primary font-headline font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-opacity shadow-[0_4px_12px_rgba(255,111,0,0.3)]">
+<span class="material-symbols-outlined">video_camera_front</span>
+                            Google Meet-ке кіру
+                        </button>
+</div>
+</div>
+<!-- Upcoming Events List -->
+<div class="bg-surface-container-lowest rounded-[24px] p-6 shadow-[0_8px_32px_rgba(26,28,28,0.06)] border border-outline-variant/15 flex-1 flex flex-col">
+<h4 class="font-headline font-bold text-lg mb-4 text-on-surface">Алдағы оқиғалар</h4>
+<div class="space-y-4 overflow-y-auto pr-2">
+<!-- List Item 1 -->
+<div class="flex items-start gap-3 p-3 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-2.5 h-2.5 rounded-full bg-[#4CAF50] mt-1.5 flex-shrink-0"></div>
+<div>
+<div class="text-sm font-headline font-bold text-on-surface group-hover:text-primary transition-colors">IELTS Speaking Practice</div>
+<div class="text-xs text-on-surface-variant mt-0.5">Ертең, 10:00</div>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex items-start gap-3 p-3 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary mt-1.5 flex-shrink-0"></div>
+<div>
+<div class="text-sm font-headline font-bold text-on-surface group-hover:text-primary transition-colors">Business English Quiz</div>
+<div class="text-xs text-on-surface-variant mt-0.5">25 Сәуір, 14:00</div>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex items-start gap-3 p-3 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-2.5 h-2.5 rounded-full bg-outline mt-1.5 flex-shrink-0"></div>
+<div>
+<div class="text-sm font-headline font-bold text-on-surface group-hover:text-primary transition-colors">Essay Deadline</div>
+<div class="text-xs text-on-surface-variant mt-0.5">26 Сәуір, 23:59</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</body></html>

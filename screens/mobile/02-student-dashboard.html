@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="kk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>1Bilim - Student Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#1a1c1c",
+                    "on-secondary-container": "#694000",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f9f9f9",
+                    "on-secondary-fixed-variant": "#663e00",
+                    "surface-container-low": "#f3f3f3",
+                    "on-tertiary-container": "#003559",
+                    "on-surface": "#1a1c1c",
+                    "surface": "#f9f9f9",
+                    "surface-bright": "#f9f9f9",
+                    "primary-fixed-dim": "#ffb691",
+                    "inverse-surface": "#2f3131",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "tertiary": "#00629f",
+                    "on-surface-variant": "#594136",
+                    "outline": "#8d7164",
+                    "secondary-container": "#fda625",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#ffddb9",
+                    "surface-tint": "#9e4200",
+                    "primary-fixed": "#ffdbcb",
+                    "secondary": "#865300",
+                    "inverse-primary": "#ffb691",
+                    "primary-container": "#ff6f00",
+                    "tertiary-container": "#08a1ff",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#793100",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-container": "#eeeeee",
+                    "primary": "#9e4200",
+                    "tertiary-fixed": "#cfe4ff",
+                    "tertiary-fixed-dim": "#9acbff",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#e8e8e8",
+                    "on-primary-container": "#592200",
+                    "on-tertiary-fixed": "#001d34",
+                    "outline-variant": "#e1bfb0",
+                    "on-primary-fixed": "#341100",
+                    "on-tertiary-fixed-variant": "#004a79",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-secondary-fixed": "#2b1700",
+                    "surface-dim": "#dadada",
+                    "secondary-fixed-dim": "#ffb961"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body": [
+                            "Manrope"
+                    ],
+                    "label": [
+                            "Plus Jakarta Sans"
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #f9f9f9; color: #1a1c1c; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-label { font-family: 'Plus Jakarta Sans', sans-serif; }
+        /* Hide scrollbar for stories */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen pb-32">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 pt-12 pb-4 w-full bg-background sticky top-0 z-40">
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-sm font-medium">Привет,</span>
+<span class="font-headline font-bold text-on-surface text-[20px] tracking-tight">Айгерим 👋</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:opacity-80 transition-opacity relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2.5 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary font-headline font-bold text-sm">
+                АБ
+            </div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="px-6 flex flex-col gap-8 mt-2">
+<!-- Stories Row -->
+<section class="flex gap-4 overflow-x-auto hide-scrollbar -mx-6 px-6 pb-2">
+<!-- Story 1 -->
+<div class="flex flex-col items-center gap-2 min-w-max cursor-pointer">
+<div class="w-[64px] h-[64px] rounded-full p-[3px] bg-gradient-to-tr from-secondary-container to-primary-container">
+<div class="w-full h-full rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="text-2xl">📢</span>
+</div>
+</div>
+<span class="font-label text-xs font-semibold text-on-surface tracking-wide">Жаңалық</span>
+</div>
+<!-- Story 2 -->
+<div class="flex flex-col items-center gap-2 min-w-max cursor-pointer">
+<div class="w-[64px] h-[64px] rounded-full p-[3px] bg-gradient-to-tr from-secondary-container to-primary-container">
+<div class="w-full h-full rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="text-2xl">🎓</span>
+</div>
+</div>
+<span class="font-label text-xs font-semibold text-on-surface tracking-wide">Тапсырма</span>
+</div>
+<!-- Story 3 -->
+<div class="flex flex-col items-center gap-2 min-w-max cursor-pointer">
+<div class="w-[64px] h-[64px] rounded-full p-[3px] bg-gradient-to-tr from-secondary-container to-primary-container">
+<div class="w-full h-full rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="text-2xl">🔥</span>
+</div>
+</div>
+<span class="font-label text-xs font-semibold text-on-surface tracking-wide">Серия</span>
+</div>
+<!-- Story 4 -->
+<div class="flex flex-col items-center gap-2 min-w-max cursor-pointer">
+<div class="w-[64px] h-[64px] rounded-full p-[3px] bg-surface-container-high">
+<div class="w-full h-full rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="text-2xl">💬</span>
+</div>
+</div>
+<span class="font-label text-xs font-semibold text-on-surface-variant tracking-wide">Чат</span>
+</div>
+<!-- Story 5: Add -->
+<div class="flex flex-col items-center gap-2 min-w-max cursor-pointer">
+<div class="w-[64px] h-[64px] rounded-full border-2 border-dashed border-outline-variant flex items-center justify-center bg-surface-container-lowest">
+<span class="material-symbols-outlined text-outline">add</span>
+</div>
+<span class="font-label text-xs font-semibold text-on-surface-variant tracking-wide">Барлығы</span>
+</div>
+</section>
+<!-- Continue Card -->
+<section>
+<div class="bg-gradient-to-br from-primary-container to-[#FFA726] rounded-[20px] p-6 shadow-[0_8px_32px_rgba(255,111,0,0.2)] flex flex-col relative overflow-hidden cursor-pointer hover:scale-[0.98] transition-transform">
+<!-- Decorative Elements -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+<div class="absolute -bottom-10 -left-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+<div class="flex justify-between items-start mb-6 z-10">
+<span class="bg-surface-container-lowest/20 backdrop-blur-md text-on-primary font-label text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-full border border-white/10">
+                        IELTS · Модуль 2
+                    </span>
+</div>
+<h3 class="font-headline font-bold text-on-primary text-2xl mb-8 z-10 leading-tight">Урок 4: Reading skills</h3>
+<div class="flex items-center justify-between z-10">
+<div class="w-2/3">
+<div class="flex justify-between text-on-primary/80 text-xs mb-2 font-medium">
+<span>Прогресс</span>
+<span>60%</span>
+</div>
+<div class="w-full h-2 bg-on-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-on-primary rounded-full" style="width: 60%;"></div>
+</div>
+</div>
+<button class="w-12 h-12 bg-surface-container-lowest rounded-full flex items-center justify-center text-primary-container shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Courses Section -->
+<section>
+<div class="flex justify-between items-end mb-4">
+<h2 class="font-headline font-bold text-on-surface text-xl tracking-tight">Менің курстарым</h2>
+<a class="text-primary font-semibold text-sm hover:opacity-80 transition-opacity" href="#">Барлығы -&gt;</a>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Course 1 -->
+<div class="bg-surface-container-lowest rounded-[16px] p-4 flex flex-col cursor-pointer hover:scale-[0.98] transition-transform shadow-[0_4px_24px_rgba(26,28,28,0.04)]">
+<span class="self-start bg-secondary-container/20 text-on-secondary-container font-label text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-full mb-3">
+                        Стандарт
+                    </span>
+<h4 class="font-headline font-bold text-on-surface text-lg mb-1">Pre-Upper</h4>
+<span class="text-on-surface-variant text-xs mb-4">Мисс Дана</span>
+<div class="mt-auto flex flex-col gap-2">
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 40%;"></div>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="font-medium text-on-surface">40%</span>
+<span class="text-on-surface-variant bg-surface px-2 py-0.5 rounded-full">18 күн</span>
+</div>
+</div>
+</div>
+<!-- Course 2 -->
+<div class="bg-surface-container-lowest rounded-[16px] p-4 flex flex-col cursor-pointer hover:scale-[0.98] transition-transform shadow-[0_4px_24px_rgba(26,28,28,0.04)]">
+<span class="self-start bg-tertiary-container/20 text-on-tertiary-container font-label text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-full mb-3">
+                        Премиум
+                    </span>
+<h4 class="font-headline font-bold text-on-surface text-lg mb-1">Beginner</h4>
+<span class="text-on-surface-variant text-xs mb-4">Мисс Асель</span>
+<div class="mt-auto flex flex-col gap-2">
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 75%;"></div>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="font-medium text-on-surface">75%</span>
+<span class="text-on-tertiary-container bg-tertiary-container/10 px-2 py-0.5 rounded-full font-medium">5 күн қалды</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CEFR Banner & Rating -->
+<section class="flex flex-col gap-4">
+<!-- Level Banner -->
+<div class="bg-surface-container-lowest rounded-[16px] p-5 flex items-center justify-between shadow-[0_4px_24px_rgba(26,28,28,0.04)]">
+<div class="flex flex-col gap-1 w-2/3">
+<h4 class="font-headline font-bold text-on-surface text-lg">Менің деңгейім</h4>
+<div class="flex items-center gap-2 text-on-surface-variant font-medium">
+<span>B1</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+<span class="text-primary-container font-bold">B2</span>
+</div>
+</div>
+<div class="w-14 h-14 rounded-full bg-gradient-to-br from-secondary-container to-primary-container flex items-center justify-center text-on-primary font-headline font-extrabold text-[22px] shadow-lg">
+                    B1
+                </div>
+</div>
+<!-- Rating Preview -->
+<div class="bg-surface-container-lowest rounded-[16px] p-4 flex items-center gap-3 shadow-[0_4px_24px_rgba(26,28,28,0.04)]">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-xl">
+                    🏆
+                </div>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-on-surface">Рейтинг: 3-орын</span>
+<span class="text-sm text-on-surface-variant">48 оқушының ішінде</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-outline-variant">chevron_right</span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-6 left-4 right-4 rounded-[32px] h-[64px] z-50 bg-white/70 dark:bg-white/70 backdrop-blur-xl shadow-[0_8px_32px_rgba(26,28,28,0.06)] md:hidden">
+<div class="fixed bottom-0 w-full px-6 pb-8 flex justify-around items-center">
+<!-- Home (Active) -->
+<button class="flex flex-col items-center justify-center bg-orange-50 text-orange-700 rounded-2xl px-4 py-1 scale-95 active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase">Home</span>
+</button>
+<!-- Lessons (Inactive) -->
+<button class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1">menu_book</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase mt-1 hidden">Lessons</span>
+</button>
+<!-- Chat (Inactive) -->
+<button class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1">forum</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase mt-1 hidden">Chat</span>
+</button>
+<!-- Profile (Inactive) -->
+<button class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-50/50 transition-colors scale-95 active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] tracking-widest uppercase mt-1 hidden">Profile</span>
+</button>
+</div>
+</nav>
+</body></html>

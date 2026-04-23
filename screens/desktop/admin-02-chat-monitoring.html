@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html lang="kk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Чат мониторинг - Admin Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#9e4200",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#ffdbcb",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary-fixed-variant": "#004a79",
+                        "on-tertiary-container": "#003559",
+                        "on-secondary-fixed-variant": "#663e00",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#cfe4ff",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed-dim": "#ffb691",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-fixed": "#001d34",
+                        "surface-container-low": "#f3f3f3",
+                        "on-primary-fixed": "#341100",
+                        "on-secondary-fixed": "#2b1700",
+                        "surface": "#f9f9f9",
+                        "on-background": "#1a1c1c",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary-container": "#694000",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#00629f",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#9acbff",
+                        "primary": "#9e4200",
+                        "outline-variant": "#e1bfb0",
+                        "on-surface-variant": "#594136",
+                        "inverse-surface": "#2f3131",
+                        "secondary-container": "#fda625",
+                        "on-primary-container": "#592200",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-dim": "#dadada",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f9f9f9",
+                        "surface-container": "#eeeeee",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#865300",
+                        "secondary-fixed": "#ffddb9",
+                        "primary-container": "#ff6f00",
+                        "outline": "#8d7164",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#ffb691",
+                        "secondary-fixed-dim": "#ffb961",
+                        "tertiary-container": "#08a1ff",
+                        "on-primary-fixed-variant": "#793100"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #f9f9f9; }
+        .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex min-h-screen">
+<!-- SideNavBar (from JSON, style executed) -->
+<nav class="bg-[#FFFFFF] text-[#FF6F00] font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-[10px] fixed left-0 top-0 h-screen w-[240px] shadow-[0_8px_32px_rgba(26,28,28,0.06)] flex flex-col py-6 gap-2 z-50 hidden md:flex">
+<div class="px-6 mb-8 flex flex-col items-start gap-1">
+<span class="text-2xl font-black text-[#FF6F00] font-display">onebilim</span>
+<span class="text-[10px] text-on-surface-variant font-bold tracking-widest uppercase">Admin Portal</span>
+</div>
+<div class="flex-1 flex flex-col gap-2 overflow-y-auto px-2">
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-bold">Home</span>
+</a>
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">sports_score</span>
+<span class="font-bold">Marathons</span>
+</a>
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">group</span>
+<span class="font-bold">Students</span>
+</a>
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">support_agent</span>
+<span class="font-bold">Curators</span>
+</a>
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">assignment_turned_in</span>
+<span class="font-bold">HW Review</span>
+</a>
+<a class="flex items-center gap-4 bg-[#FF6F00] text-white rounded-full mx-2 font-bold px-4 py-3 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">forum</span>
+<span>Chat Monitoring</span>
+</a>
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">leaderboard</span>
+<span class="font-bold">Statistics</span>
+</a>
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">payments</span>
+<span class="font-bold">Tariffs</span>
+</a>
+<a class="flex items-center gap-4 text-[#1A1C1C] opacity-70 hover:opacity-100 px-4 py-3 hover:bg-[#F9F9F9] rounded-full mx-2 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">auto_stories</span>
+<span class="font-bold">Stories</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col md:ml-[240px] min-w-0">
+<!-- TopAppBar (from JSON, style executed) -->
+<header class="bg-[#F9F9F9]/80 backdrop-blur-xl text-[#9E4200] font-['Plus_Jakarta_Sans'] font-semibold tracking-tight h-16 bg-[#E8E8E8] shadow-none flex justify-between items-center px-8 w-full sticky top-0 z-40 md:hidden">
+<div class="text-xl font-bold text-[#FF6F00] tracking-tighter">onebilim</div>
+<div class="flex items-center gap-4">
+<button class="scale-95 active:opacity-80 transition-all hover:bg-[#E8E8E8] rounded-full p-2 text-[#1A1C1C]">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="scale-95 active:opacity-80 transition-all hover:bg-[#E8E8E8] rounded-full p-2 text-[#1A1C1C]">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Admin Avatar" class="w-full h-full object-cover" data-alt="minimalist placeholder avatar with random solid color background and white text reading 'A', soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNuk-EK0G-dcQ-V49mX99hIz1ITnTqlKa44SXm6DOYAtBaY2pSKMh-h7IuPe3LJqTFleLOR_4a7pEIeRLTgLLc9Qgk-5sw08dNpS0e54EP1Fc2-BgyPPbYLSvMkqiStWhkKg5lgnnc1HhiBUVsjjLAb-LlheOj3fndOs3MzjDymJtAzTpswFE_PCqVIC4-ehGekGUJW-TBjBZFKKOSHEgrdAXNa7iv60YAvuIXPJEwh-V5AGGFI2Kf0vzBAtIKmCK7JO5SHxTF64R7"/>
+</div>
+</div>
+</header>
+<!-- Desktop Top App Bar Alternative (for spacing/alignment) -->
+<header class="hidden md:flex justify-between items-center px-8 h-20 bg-surface/80 backdrop-blur-md sticky top-0 z-40 w-full">
+<h1 class="font-display text-2xl font-bold tracking-tight text-on-surface">Чат мониторинг</h1>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline-variant/30 rounded-full text-sm font-body focus:outline-none focus:ring-2 focus:ring-primary-container/50 w-64 transition-all" placeholder="Іздеу..." type="text"/>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center hover:bg-surface-container-high transition-colors shadow-sm relative text-on-surface-variant">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest shadow-sm overflow-hidden border-2 border-surface-container-lowest">
+<img alt="Admin Avatar" class="w-full h-full object-cover" data-alt="professional headshot of an administrator in soft natural lighting, looking approachable" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXiR3aCwfN7cwARyPKTRUTz4wAe7ZFQrDExBBvo9zjsUwjwFEGostm0egaCnzAh4Xcx7PTY1zP-uVEHb1K_9sfrm79MiR5u9HgRbV3nT_LdQ4m1vA4gD2cPphGvXVuOpfeVsjARUKnfh2kM0j2gejPsymUFN07CAdNOpPWylgehg816zYKIGIKLM7wHiiHAkA8W4diK6HO45swW2gfPwNQbwWu7J1wY8-bW492ioF23SgDfjGDRsnHNQ_jbiNHNSO8rhon1m3QGQjM"/>
+</div>
+</div>
+</header>
+<div class="p-6 md:p-8 flex flex-col gap-8 max-w-7xl mx-auto w-full">
+<!-- Mobile Title -->
+<h1 class="font-display text-2xl font-bold tracking-tight text-on-surface md:hidden mb-2">Чат мониторинг</h1>
+<!-- TOP STATS ROW -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+<!-- Stat Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_8px_32px_rgba(26,28,28,0.04)] flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">forum</span>
+</div>
+<div class="mt-2 flex flex-col">
+<span class="font-display text-3xl font-bold text-[#1A1A1A]">248</span>
+<span class="font-body text-sm font-medium text-[#6B6B6B]">Белсенді чат</span>
+</div>
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary-container/5 rounded-full blur-xl pointer-events-none"></div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_8px_32px_rgba(26,28,28,0.04)] flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-[#EF7D00]" style="font-variation-settings: 'FILL' 1;">schedule</span>
+</div>
+<div class="mt-2 flex flex-col">
+<span class="font-display text-3xl font-bold text-[#EF7D00]">2.4 сағ</span>
+<span class="font-body text-sm font-medium text-[#6B6B6B]">Орташа жауап</span>
+<span class="font-body text-xs text-on-surface-variant/70 mt-1">Кураторлар бойынша</span>
+</div>
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-[#EF7D00]/10 rounded-full blur-xl pointer-events-none"></div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_8px_32px_rgba(26,28,28,0.04)] flex flex-col gap-2 relative overflow-hidden border border-error/10">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-[#E74C3C]" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="mt-2 flex flex-col">
+<span class="font-display text-3xl font-bold text-[#E74C3C]">12</span>
+<span class="font-body text-sm font-medium text-[#6B6B6B]">Жауапсыз 24ч+</span>
+<span class="font-body text-xs font-semibold text-[#E74C3C] mt-1 bg-error/10 w-fit px-2 py-0.5 rounded-full">Назар аудар</span>
+</div>
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-error/5 rounded-full blur-xl pointer-events-none"></div>
+</div>
+</section>
+<!-- TWO COLUMN LAYOUT -->
+<section class="flex flex-col lg:flex-row gap-6">
+<!-- LEFT COLUMN (60%) -->
+<div class="w-full lg:w-[60%] flex flex-col gap-4">
+<div class="flex justify-between items-end mb-2">
+<h2 class="font-display text-lg font-bold text-on-surface tracking-tight">Барлық чаттар</h2>
+</div>
+<!-- CHAT TABLE -->
+<div class="bg-surface-container-lowest rounded-[16px] shadow-[0_8px_32px_rgba(26,28,28,0.03)] border border-surface-container-high overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface-container-high/50 bg-surface/50">
+<th class="py-4 px-5 font-body text-[12px] font-semibold text-[#6B6B6B] uppercase tracking-wider">Оқушы</th>
+<th class="py-4 px-5 font-body text-[12px] font-semibold text-[#6B6B6B] uppercase tracking-wider hidden sm:table-cell">Куратор</th>
+<th class="py-4 px-5 font-body text-[12px] font-semibold text-[#6B6B6B] uppercase tracking-wider hidden md:table-cell">Соңғы хабарлама</th>
+<th class="py-4 px-5 font-body text-[12px] font-semibold text-[#6B6B6B] uppercase tracking-wider">Уақыт</th>
+<th class="py-4 px-5 font-body text-[12px] font-semibold text-[#6B6B6B] uppercase tracking-wider hidden lg:table-cell">Жауап уақыты</th>
+<th class="py-4 px-5 font-body text-[12px] font-semibold text-[#6B6B6B] uppercase tracking-wider">Статус</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/50">
+<!-- Row 1 -->
+<tr class="hover:bg-surface/50 transition-colors h-[56px] group cursor-pointer">
+<td class="py-3 px-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/20 overflow-hidden flex-shrink-0">
+<img alt="Айгерим Бекова" class="w-full h-full object-cover" data-alt="portrait of a young female student, softly lit, smiling slightly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxGpze0Rc6iPTB7RxxGupLo1eKCMSGKrvO3_xLa0SWdvmb9DXUi5DAq_LdFab7Coh2F1aH0PYi7Kpj1-hefHLxZauX7EH4b2JpYDSC8hBw9tLXiPOslU-lvJMk4Jt48Sae4sqTeiu7fHboH_F-R7DvvoSfALLiqamXKwpRVTcBLTi4RGe1gjTbcPsy0WWXUeOoAouXtnx3h-mMN4yGiC6LvaBGHbmNReVYW3ABdWdMKrNSfCT8cZBE7VUT__7qKuhNIGOaX2ALKKcc"/>
+</div>
+<span class="font-display text-sm font-semibold text-on-surface whitespace-nowrap">Айгерим Бекова</span>
+</div>
+</td>
+<td class="py-3 px-5 hidden sm:table-cell">
+<span class="font-body text-sm text-on-surface-variant">Мисс Дана</span>
+</td>
+<td class="py-3 px-5 hidden md:table-cell max-w-[150px]">
+<p class="font-body text-sm text-on-surface-variant truncate">Үй тапсырмасын жібердім...</p>
+</td>
+<td class="py-3 px-5">
+<span class="font-body text-sm text-on-surface-variant whitespace-nowrap">10:42</span>
+</td>
+<td class="py-3 px-5 hidden lg:table-cell">
+<span class="font-body text-sm font-semibold text-[#27AE60]">1.2 сағ</span>
+</td>
+<td class="py-3 px-5">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-[#E8F5E9] text-[#27AE60] whitespace-nowrap">
+                                            Жауап берілді
+                                        </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface/50 transition-colors h-[56px] group cursor-pointer bg-error/5">
+<td class="py-3 px-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 overflow-hidden flex-shrink-0">
+<img alt="Мейрам Сейіт" class="w-full h-full object-cover" data-alt="portrait of a male student looking thoughtful, natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADOMFemECDndADtoZ7c-9YTq79uaJmPfrZg65knGOPZDf5ivNYf-lCgz6EAO4iWWViJFxT30Y_5FFrviEkjU-XyGA3bMF5Zucm9L9-chTRS6oGP3mHhPKhJ5_KlAbX3w5aITy2j8_0UHKaP05o7kAG_NiUw__M1XAyquzdNuTDwteaMarGn2DtFUPZF7Rdrpr4PTFnR58Ni_O4rkztikcllnJn_Bze2V7BIRML7bhuT6ZpGKNI4ugHfbTM5fyB-KLfBZ8X5hP60RYW"/>
+</div>
+<span class="font-display text-sm font-semibold text-on-surface whitespace-nowrap">Мейрам Сейіт</span>
+</div>
+</td>
+<td class="py-3 px-5 hidden sm:table-cell">
+<span class="font-body text-sm text-on-surface-variant">Мисс Асель</span>
+</td>
+<td class="py-3 px-5 hidden md:table-cell max-w-[150px]">
+<p class="font-body text-sm text-on-surface-variant font-medium text-on-surface truncate">Сабақ қашан?</p>
+</td>
+<td class="py-3 px-5">
+<span class="font-body text-sm font-medium text-on-surface whitespace-nowrap">Кеше</span>
+</td>
+<td class="py-3 px-5 hidden lg:table-cell">
+<span class="font-body text-sm font-bold text-[#E74C3C]">26 сағ</span>
+</td>
+<td class="py-3 px-5">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-[#FDEDEB] text-[#E74C3C] whitespace-nowrap">
+                                            Жауапсыз
+                                        </span>
+</td>
+</tr>
+<!-- Empty states / padding for visual balance -->
+<tr class="h-[56px] border-transparent"><td colspan="6"></td></tr>
+<tr class="h-[56px] border-transparent"><td colspan="6"></td></tr>
+</tbody>
+</table>
+<div class="p-4 border-t border-surface-container-high/50 flex justify-center">
+<button class="text-sm font-display font-semibold text-primary-container hover:text-primary transition-colors">Барлығын көру</button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (40%) -->
+<div class="w-full lg:w-[40%] flex flex-col gap-4">
+<h2 class="font-display text-lg font-bold text-on-surface tracking-tight mb-2">Кураторлар белсенділігі</h2>
+<div class="flex flex-col gap-3">
+<!-- Curator Card 1 (Green) -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-[12px] p-4 shadow-[0_4px_16px_rgba(26,28,28,0.02)] flex flex-col gap-3 hover:shadow-[0_8px_24px_rgba(26,28,28,0.06)] transition-all">
+<div class="flex items-center gap-3">
+<div class="w-[36px] h-[36px] rounded-full overflow-hidden border border-surface-variant flex-shrink-0">
+<img alt="Мисс Дана" class="w-full h-full object-cover" data-alt="professional headshot of a female teacher wearing glasses, friendly expression, soft office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ3vUnSAMddumRsTqnkFJkNhVlaS-Din6-vnGEw4-YczWt8chMFhT4XfPd957eA8h9H8P_BT-h1oSwQ3vQrrYgUbpSIgspTx8ZZQMcHuxRxIcEOfHvADEQBJxrvacFWZXaPBcoYJNaErW4TVEuyzW1DpgpierG3sGX7DSz3a5gW5dzcx1riqkuvknrl1yDNDJvj1dxp-5-aDJBxpngLvE9rhIfTF1-nfzP_JXAOkF4hKtPKLr2w-FXsID4WN0rh_IjK54SmpME3Xs7"/>
+</div>
+<span class="font-display text-[14px] font-bold text-on-surface">Мисс Дана</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="flex flex-col">
+<span class="font-display text-[14px] font-bold text-[#EF7D00]">24</span>
+<span class="font-body text-[11px] font-medium text-[#6B6B6B]">оқушы</span>
+</div>
+<div class="flex flex-col border-l border-surface-container-high pl-2">
+<span class="font-display text-[14px] font-bold text-[#EF7D00]">2.1 сағ</span>
+<span class="font-body text-[11px] font-medium text-[#6B6B6B]">жауап</span>
+</div>
+<div class="flex flex-col border-l border-surface-container-high pl-2">
+<span class="font-display text-[14px] font-bold text-[#EF7D00]">98%</span>
+<span class="font-body text-[11px] font-medium text-[#6B6B6B]">жауап берді</span>
+</div>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden mt-1">
+<div class="h-full bg-[#27AE60] rounded-full w-[80%]"></div>
+</div>
+</div>
+<!-- Curator Card 2 (Yellow) -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-[12px] p-4 shadow-[0_4px_16px_rgba(26,28,28,0.02)] flex flex-col gap-3 hover:shadow-[0_8px_24px_rgba(26,28,28,0.06)] transition-all">
+<div class="flex items-center gap-3">
+<div class="w-[36px] h-[36px] rounded-full overflow-hidden border border-surface-variant flex-shrink-0">
+<img alt="Мисс Асель" class="w-full h-full object-cover" data-alt="professional headshot of a young female educator, warm lighting, approachable smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz41JH_8InoD6C7jxhePguUOpdnbSoDkh8Utvg0Ex5aovJk44o93qCmdKxooLPdJJJ6be4PGlyt5uvqrlqBIOl0pblKWX2b-Dh12DoBt9jdT5Y8LPtJQl9AVH0LB6Q5tJ4gbBrRCMKk4vfKf5RB6oO5ftlBEzaifourXAHVlyfpq6AKNKYeGzl058j5BzTP7ld4e-YCvcsHSBNinPJGmG0c8cEQJGqq3Dc4pLkjctBKqN75RlKmc1zMaG_7TPjHAQVRmW3HRmyPu_5"/>
+</div>
+<span class="font-display text-[14px] font-bold text-on-surface">Мисс Асель</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="flex flex-col">
+<span class="font-display text-[14px] font-bold text-[#EF7D00]">42</span>
+<span class="font-body text-[11px] font-medium text-[#6B6B6B]">оқушы</span>
+</div>
+<div class="flex flex-col border-l border-surface-container-high pl-2">
+<span class="font-display text-[14px] font-bold text-[#EF7D00]">4.5 сағ</span>
+<span class="font-body text-[11px] font-medium text-[#6B6B6B]">жауап</span>
+</div>
+<div class="flex flex-col border-l border-surface-container-high pl-2">
+<span class="font-display text-[14px] font-bold text-[#EF7D00]">85%</span>
+<span class="font-body text-[11px] font-medium text-[#6B6B6B]">жауап берді</span>
+</div>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden mt-1">
+<div class="h-full bg-[#F2C94C] rounded-full w-[60%]"></div>
+</div>
+</div>
+<!-- Curator Card 3 (Red) -->
+<div class="bg-surface-container-lowest border border-error/20 rounded-[12px] p-4 shadow-[0_4px_16px_rgba(26,28,28,0.02)] flex flex-col gap-3 hover:shadow-[0_8px_24px_rgba(26,28,28,0.06)] transition-all bg-error/5">
+<div class="flex items-center gap-3">
+<div class="w-[36px] h-[36px] rounded-full overflow-hidden border border-surface-variant flex-shrink-0">
+<img alt="Ерлан" class="w-full h-full object-cover" data-alt="professional headshot of a male educator looking focused, bright office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl3JH_LA6r3gFPz251mVuwi6P7MbfoOfS42dXy8Ss17HFwKAh1K40BmRFJs7GFeeaU4gR_ZZ583coI9JxBLS6raa9TfRSndaiROZBJl9mfSqCAjOcb90DC0kDrLMAJe1dr4_AckqTQ9bQZwzl0QbLfc89E88I1-4MFmJW8qfoZHdbEKAKBDBSyWDEJOWN37d5G9z2a654i7_p1jWQSQDI5JqwJ2YRXw4AdkJSfdabRlfNOC377ChkxTr9yKi5ePXY1YAsGWFrQsa0Q"/>
+</div>
+<span class="font-display text-[14px] font-bold text-on-surface">Ерлан</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="flex flex-col">
+<span class="font-display text-[14px] font-bold text-[#EF7D00]">18</span>
+<span class="font-body text-[11px] font-medium text-[#6B6B6B]">оқушы</span>
+</div>
+<div class="flex flex-col border-l border-surface-container-high/50 pl-2">
+<span class="font-display text-[14px] font-bold text-[#E74C3C]">8.2 сағ</span>
+<span class="font-body text-[11px] font-medium text-[#6B6B6B]">жауап</span>
+</div>
+<div class="flex flex-col border-l border-surface-container-high/50 pl-2">
+<span class="font-display text-[14px] font-bold text-[#E74C3C]">62%</span>
+<span class="font-body text-[11px] font-medium text-[#6B6B6B]">жауап берді</span>
+</div>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden mt-1">
+<div class="h-full bg-[#E74C3C] rounded-full w-[35%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>
